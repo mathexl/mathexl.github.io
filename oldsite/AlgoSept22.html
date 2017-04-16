@@ -1,0 +1,2657 @@
+<html lang="en"><head>
+    
+
+
+  <meta name="google-site-verification" content="C-NzP7eylOfcFok8Dw1JO233FAMq480eGaJIpA57Fv4">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Jaldi|Mukta+Vaani" rel="stylesheet">
+    <title>Parsegon</title>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://cdn.heapanalytics.com/js/heap-3601581806.js"></script><script type="text/javascript" async="" src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-3.0.1-min.gz.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/function-plot/1.17.0/function-plot.js"></script>
+    <script src="/assets/math.js"></script>
+    <script src="/assets/mathex.js"></script>
+
+    <link href="/assets/math.css" rel="stylesheet" type="text/css">
+
+        <script src="/assets/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+    <script src="/assets/jquery-2.2.0.min.js"></script>
+    <link href="/assets/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="/assets/typed.js"></script>
+    <script src="/assets/jquery-ui-1.10.1.custom.js"></script>
+    <script src="/assets/autogrow.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/images/parsegon_blue.ico">
+    <script src="/assets/typed.js"></script>
+    <script src="/assets/chi/index.js"></script>
+    <link rel="stylesheet" href="/assets/highlight/styles/dracula.css">
+    <script src="/assets/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    if (window.location.protocol != "https:" && window.location.href.indexOf("localhost") == -1)
+        window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+
+    if (window.location.hostname.indexOf("www.") == -1 && window.location.href.indexOf("localhost") == -1) {
+        window.location.hostname = 'www.parsegon.com';
+    }
+    </script>
+    <!-- amplitude -->
+    <script type="text/javascript">
+      (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script");r.type="text/javascript";
+      r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-3.0.1-min.gz.js";
+      r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(r,i);function s(e,t){e.prototype[t]=function(){this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+      return this}}var o=function(){this._q=[];return this};var a=["add","append","clearAll","prepend","set","setOnce","unset"];
+      for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[];return this;
+      };var p=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"];
+      for(var l=0;l<p.length;l++){s(c,p[l])}n.Revenue=c;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId"];
+      function v(e){function t(t){e[t]=function(){e._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+      }}for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){e=(!e||e.length===0?"$default_instance":e).toLowerCase();
+      if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]};e.amplitude=n;
+      })(window,document);
+      amplitude.getInstance().init("e4a1b85f84dfc41c9577f34db0110c2e");
+    </script>
+    <!-- heap -->
+    <script type="text/javascript">
+      window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"https:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+        heap.load("3601581806");
+    </script>
+    <!-- Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/devices.min.css" type="text/css">
+    <link rel="shortcut icon" href="/images/parsegon_blue.ico">
+    <script>
+    if(window.location.href.indexOf("twiiverse") != -1){ while(1 == 1){ console.log("HELLO!"); } }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.15/vue.min.js"></script>
+    <script src="/assets/typed.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-75127321-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <link href="/assets/style.css" rel="stylesheet" type="text/css">
+    <script>
+    window.asyncupdate = function(url, data){
+      if(url.substring(0,1) == "/"){url = url.substring(1);}
+      var base_url = window.location.protocol + "//" + window.location.host;
+      $.ajaxSetup({
+         headers: { 'X-CSRF-Token' : "6o2BPjsbAyHPRgwuY30Qc0tnHKGMNj9k63vzGMuR"}
+      });
+      $.ajax({
+          type: "POST", // or GET
+          url: base_url + "/" + url,
+          data: data,
+          success: function(data){
+          console.log(data);
+           window.data = data;
+          }
+      });
+      dat = window.data;
+      return dat;
+    }
+    function update(url, data){
+      var base_url = window.location.protocol + "//" + window.location.host;
+      $.ajaxSetup({
+         headers: { 'X-CSRF-Token' : "6o2BPjsbAyHPRgwuY30Qc0tnHKGMNj9k63vzGMuR"}
+      });
+      $.ajax({
+          type: "POST", // or GET
+          url: base_url + "/" + url,
+          async: false,
+          data: data,
+          success: function(data){
+           window.data = data;
+          }
+      });
+      dat = window.data;
+      return dat;
+
+    }
+    function convertBraces(str){
+      index = 0;
+      while(str.indexOf("[[", index) != -1) {
+    		open = str.indexOf("[[", index);
+    		close = str.indexOf("]]", index);
+    		if (close == -1) {
+    			// break; // unmatched ]]
+    			str = str + "]]";
+    			close = str.indexOf("]]", index);
+    		}
+    		index = close + 1;
+    		str = str.substring(0, open) + "`" + str.substring(open + 2, close) + "`" + str.substring(close + 2);
+    	}
+      return str;
+    }
+    function wrapinHTML(str, textmath=false, notextblocks=false){
+      if(window.tracer == undefined){
+        window.tracer = [];
+      }
+      if (textmath == false) {
+       str = "<div class='text'>" + str + "</div>";
+      }
+    	codebool = false;
+    	while(str.indexOf("```") != -1){
+    		codebool = true;
+    		pos = str.indexOf("```");
+    		endbloc = str.indexOf("```",pos+3);
+    		if(endbloc == -1){
+    			endbloc = str.length;
+    		}
+    		str = str.substring(0,pos) + "</div><pre><code class='codebloc PHP'>" +
+    		str.substring(pos+3,endbloc) + "</code></pre><div class='text'>" + str.substring(endbloc + 3);
+    	}
+    	// [here]
+      notclosed = false;
+    	str = convertBraces(str);
+    	while(str.indexOf("`") != -1 || textmath == true && notextblocks == false){
+    		var first = str.indexOf("`");
+    		var next = str.indexOf("`",first+1);
+    		if(next == -1){
+    				next = str.length;
+    		}
+        entry = str.substring(first+1,next);
+        if(notextblocks == true){
+          obj = new mathex(str.substring(first+1,next));
+        }
+        else if (textmath == true) {
+          textmath = false;
+          obj = new mathex(str);
+        } else {
+    		  obj = new mathex(str.substring(first+1,next));
+        }
+    		toadd = "";
+    		if(window.defined.length > 0){
+    		for(i = 0; i < window.defined.length; i++){
+    			$(".definitions_group").show();
+    			toadd = toadd + "<p><span style='color:lightblue'>" + window.defined[i][0] +
+    			"</span> <span style='color:beige'>as</span> <i>"
+    			+ window.defined[i][1] + "</i></p>";
+    			}
+    		} else {
+    			$(".definitions_group").hide();
+    		}
+
+    		$(".definitions").html(toadd);
+
+    		style = "";
+    		if(obj.large_eq == false){
+    			style = style + "margin-bottom: -46px !important;margin-top: -14px !important;";
+    		}
+
+    		if(str.substring(first+1,next).indexOf("venn diagram") != -1){
+    			style = style + "margin-bottom:95px !important;";
+    		}
+
+    		regex = new RegExp("</div>","ig");
+    		regex2 = new RegExp("<div term>","ig");
+    		checkhtml = obj.html.replace(regex,"").replace(regex2,"");
+
+        if(notextblocks == false){
+          if (checkhtml.trim().length > 0){ //checks if string is just whitepspace
+            if(first - 5 < 0){
+            str = str.substring(0,first) + "</div><div equation cadence='"+window.tracer.length+"' style='" + style + "'>" + obj.html + "</div><div class='text'>" +  str.substring(next+1);
+            } else {
+              str = str.substring(0,first) + "</div><div equation cadence='"+window.tracer.length+"' style='" + style + "'>" + obj.html + "</div><div class='text'>" +  str.substring(next+1);
+            }
+          } else {
+            str = str.substring(0,first) + "</div><div class='text'>" +  str.substring(next+1);
+          }
+        } else {
+          if (checkhtml.trim().length > 0){ //checks if string is just whitepspace
+            if(first - 5 < 0){
+            str = str.substring(0,first) + "<div equation cadence='"+window.tracer.length+"' style='" + style + "'>" + obj.html + "</div>" +  str.substring(next+1);
+            } else {
+              str = str.substring(0,first) + "<div equation cadence='"+window.tracer.length+"' style='" + style + "'>" + obj.html + "</div>" +  str.substring(next+1);
+            }
+          } else {
+            str = str.substring(0,first) + "" +  str.substring(next+1);
+          }
+        }
+
+        window.tracer.push(entry);
+
+
+
+
+    	};
+
+      while(str.indexOf("****") != -1 && str.indexOf("****",str.indexOf("****")+1) != -1){
+        first = str.indexOf("****");
+        second = str.indexOf("****",str.indexOf("****")+4);
+        str = str.substring(0,first) + "<u>" + str.substring(first+4,second) + "</u>" + str.substring(second+4);
+      }
+
+      while(str.indexOf("***") != -1 && str.indexOf("***",str.indexOf("***")+1) != -1){
+        first = str.indexOf("***");
+        second = str.indexOf("***",str.indexOf("***")+3);
+        str = str.substring(0,first) + "<i><b>" + str.substring(first+3,second) + "</b></i>" + str.substring(second+3);
+      }
+
+      while(str.indexOf("**") != -1 && str.indexOf("**",str.indexOf("**")+1) != -1){
+        first = str.indexOf("**");
+        second = str.indexOf("**",str.indexOf("**")+2);
+        str = str.substring(0,first) + "<i>" + str.substring(first+2,second) + "</i>" + str.substring(second+2);
+      }
+
+
+
+      while(str.indexOf("*") != -1 && str.indexOf("*",str.indexOf("*")+1) != -1){
+        first = str.indexOf("*");
+        second = str.indexOf("*",str.indexOf("*")+1);
+        str = str.substring(0,first) + "<b>" + str.substring(first+1,second) + "</b>" + str.substring(second+1);
+      }
+
+
+      if(notextblocks == false){
+    	regex = new RegExp("<br>","g");
+    	str = str.replace(regex,"</div><br><div class='text'>")
+    	regex = new RegExp("<br/>","g");
+    	str = str.replace(regex,"</div><br/><div class='text'>")
+      }
+    	regex = new RegExp('<div class="text"></div>',"ig");
+    	str = str.replace(regex,"");
+    	regex = new RegExp("<div class='text'></div>","ig");
+    	str = str.replace(regex,"");
+    	return str;
+    }
+    var d3 = window.d3
+    function bufferGraphs(){
+      instance = [];
+      for(i = 0; i < window.graphs.length; i++){
+
+        graph = window.graphs[i];
+        if (!graph) {
+          continue;
+        }
+        eqs = graph[0];
+        num = graph[1];
+        functions = [];
+        //console.log("equtions:");
+        //console.log(eqs);
+        for (i = 0; i < eqs.length; i++) {
+          /*if (eqs[i][6] == 'polar') {
+            eqs[i] = eqs[i].replace(/\s/g, '');
+            eqs[i] = eqs[i].replace("theta", " theta");
+            var func = {
+              r: eqs[i],
+              fnType: 'polar',
+              graphType: 'polyline'
+            };
+          } else */
+          if (typeof eqs[i] === 'object' && eqs[i].name == 'vector') {
+            var func = {
+              vector: [parseInt(eqs[i].fromX), parseInt(eqs[i].fromY)],
+              offset: [parseInt(eqs[i].toX), parseInt(eqs[i].toY)],
+              graphType: 'polyline',
+              fnType: 'vector',
+              color:'grey'
+            };
+          }
+          else if (typeof eqs[i] === 'object' && eqs[i].name == 'function') {
+            eqs[i].equation = eqs[i].equation.replace(/\s/g, '');
+            if(eqs[i].equation.indexOf('y') != -1){
+              var func = {fn: eqs[i].equation, color: eqs[i].color, fnType: 'implicit'};
+            } else {
+              var func = {fn: eqs[i].equation, color: eqs[i].color};
+            }
+          }
+          else {
+            eqs[i] = eqs[i].replace(/\s/g, '');
+            if(eqs[i].indexOf('y') != -1){
+              var func = {fn: eqs[i], fnType: 'implicit'};
+            } else {
+              var func = {fn: eqs[i]};
+            }
+          }
+          // //console.log(func);
+          // //console.log(func);
+          functions.push(func);
+        }
+         //console.log(functions);
+
+
+
+        // //console.log(functions);
+        // //console.log(graph[3][0]);
+        // //console.log(graph[3][1]);
+
+        // eq = eq.replace(/\s/g, '');
+        instance[num] = functionPlot({
+          target: "#graph_" + num,
+          xAxis: {
+              domain: graph[3][0]
+          },
+          yAxis: {
+              domain: graph[3][1]
+          },
+          data: functions,
+          grid: true,
+          width: 240,
+          height: 200,
+          tip: {
+            xLine: true,    // dashed line parallel to y = 0
+            yLine: true,    // dashed line parallel to x = 0
+            renderer: function (x, y, index) {
+              if(window.lastupdatedtip != false){
+              return window.lastupdatedtip;
+              } else { return ""}
+            }
+          },
+        });
+        if(graph[4] == true){
+          var format = instance[num].meta.yAxis.tickFormat();
+          var format = instance[num].meta.xAxis.tickFormat();
+          var imaginaryFormat = function (d) {
+            return '';
+          }
+          instance[num].meta.yAxis.tickFormat(imaginaryFormat);
+          instance[num].meta.xAxis.tickFormat(imaginaryFormat);
+          instance[num].draw()
+        }
+        if(graph[5][0]){
+          //console.log("hola");
+          //console.log(graph[5])
+          instance[num].on("tip:update",function(x,y,index){
+            window.lastupdatedtip = graph[5][index];
+          });
+        }
+      }
+    };
+    </script>
+    <script>
+
+    function enterMath(last, overString){
+      window.laststring = "";
+      window.memorystring = "";
+      if(overString == undefined)
+      {
+    	  overString = "";
+      }
+      var startPos = last.selectionStart;
+      var endPos = last.selectionEnd;
+      var scrollTop = last.scrollTop;
+      if(endPos > startPos){
+        overString = last.value.substring(startPos,endPos);
+      }
+      var myValue = "[[" + overString + "]]";
+      last.value = last.value.substring(0, startPos) + myValue + last.value.substring(endPos,last.value.length);
+      last.focus();
+      last.selectionStart = startPos + 4 - 2;
+      last.selectionEnd = startPos + 4 - 2;
+      last.scrollTop = scrollTop;
+    }
+
+    function focusArea(last, pos, cadence, broke){
+      var el = document.getElementById(last);
+      var range = document.createRange();
+      var sel = window.getSelection();
+      if(cadence == false){
+        eq = 0;
+        for(counter = 0; counter < el.childNodes.length; counter++){
+          if(el.childNodes[counter].length == undefined){
+            if(el.childNodes[counter].attributes.cadence != undefined && window.tracer.length - 1 == el.childNodes[counter].attributes.cadence.value){
+              pos = pos - window.tracer[eq].length + 1;
+            } else {
+              pos = pos - el.childNodes[counter].outerHTML.length;
+            }
+            eq++;
+            continue;
+          }
+          if(pos > el.childNodes[counter].length){
+            pos = pos - el.childNodes[counter].length;
+            continue;
+          } else {
+            cadence = counter;
+            if(pos < 0 || pos == NaN){
+              pos = 0;
+            }
+            break;
+          }
+        }
+      }
+      if(cadence === false){
+        cadence = el.childNodes.length - 1;
+      }
+      range.setStart(el.childNodes[cadence], pos);
+      range.collapse(true);
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+
+    function countIndex(str, findStr){
+      lastIndex = 0;
+      count = 0;
+      while(lastIndex != -1){
+          lastIndex = str.indexOf(findStr,lastIndex);
+          if(lastIndex != -1){
+              count ++;
+              lastIndex += findStr.length;
+          }
+      }
+      return count;
+    }
+
+    function outofEquation(html, loc){
+      a = html.lastIndexOf("[[",loc);
+      if(a == -1){ return true }
+      b = html.indexOf("]]",a);
+      if(b == -1){ return true}
+      if(b + 1 > loc){
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    function getCharacterOffsetWithin(range, node) {
+        var treeWalker = document.createTreeWalker(
+            node,
+            NodeFilter.SHOW_TEXT,
+            function(node) {
+                var nodeRange = document.createRange();
+                nodeRange.selectNodeContents(node);
+                return nodeRange.compareBoundaryPoints(Range.END_TO_END, range) < 1 ?
+                    NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+            },
+            false
+        );
+
+        var charCount = 0;
+        while (treeWalker.nextNode()) {
+            charCount += treeWalker.currentNode.length;
+        }
+        if (range.startContainer.nodeType == 3) {
+            charCount += range.startOffset;
+        }
+        return charCount;
+    }
+
+    function enterBold(last, overString){
+      if(overString == undefined)
+      {
+    	  overString = "";
+      }
+      var startPos = last.selectionStart;
+      var endPos = last.selectionEnd;
+      var scrollTop = last.scrollTop;
+      if(endPos > startPos){
+        overString = last.value.substring(startPos,endPos);
+      }
+      var myValue = "*" + overString + "*";
+      last.value = last.value.substring(0, startPos) + myValue + last.value.substring(endPos,last.value.length);
+      last.focus();
+      last.selectionStart = startPos + 2 - 1;
+      last.selectionEnd = startPos + 2 - 1;
+      last.scrollTop = scrollTop;
+    }
+
+    function enterUnderline(last, overString){
+      if(overString == undefined)
+      {
+        overString = "";
+      }
+      var startPos = last.selectionStart;
+      var endPos = last.selectionEnd;
+      var scrollTop = last.scrollTop;
+      if(endPos > startPos){
+        overString = last.value.substring(startPos,endPos);
+      }
+      var myValue = "****" + overString + "****";
+      last.value = last.value.substring(0, startPos) + myValue + last.value.substring(endPos,last.value.length);
+      last.focus();
+      last.selectionStart = startPos + 8 - 4;
+      last.selectionEnd = startPos + 8 - 4;
+      last.scrollTop = scrollTop;
+    }
+
+
+    function enterItalic(last, overString){
+      if(overString == undefined)
+      {
+        overString = "";
+      }
+      var startPos = last.selectionStart;
+      var endPos = last.selectionEnd;
+      var scrollTop = last.scrollTop;
+      if(endPos > startPos){
+        overString = last.value.substring(startPos,endPos);
+      }
+      var myValue = "**" + overString + "**";
+      last.value = last.value.substring(0, startPos) + myValue + last.value.substring(endPos,last.value.length);
+      last.focus();
+      last.selectionStart = startPos + 4 - 2;
+      last.selectionEnd = startPos + 4 - 2;
+      last.scrollTop = scrollTop;
+    }
+
+
+    function escapeMath(last){
+      var startPos = last.selectionStart;
+      var endPos = last.selectionEnd;
+      var scrollTop = last.scrollTop;
+      lastbackbrackets = last.value.substring(0, startPos).lastIndexOf("]]");
+      lastfrontbrackets = last.value.substring(0, startPos).lastIndexOf("[[");
+      if(lastfrontbrackets > lastbackbrackets){
+        nextbrackets = last.value.substring(endPos).indexOf("]]");
+        if(nextbrackets > -1){
+          last.focus();
+          last.selectionStart = nextbrackets + 2 + endPos;
+          last.selectionEnd = nextbrackets + 2 + endPos;
+          last.scrollTop = scrollTop;
+        }
+      }
+    }
+    $(document).on("keydown",".qtextarea", function (e) {
+		    if (e.which == 13 && e.ctrlKey || e.which == 10 && e.ctrlKey || e.which==77 && e.ctrlKey) {
+          enterMath(this);
+        	e.preventDefault();
+        }
+
+
+        else if (e.which == 85 && e.ctrlKey || e.which == 85 && e.ctrlKey || e.which==85 && e.ctrlKey) {
+          enterUnderline(this);
+          e.preventDefault();
+        }
+
+        else if (e.which == 66 && e.ctrlKey || e.which == 66 && e.ctrlKey || e.which==66 && e.ctrlKey) {
+          enterBold(this);
+          e.preventDefault();
+        }
+
+        else if (e.which == 73 && e.ctrlKey || e.which == 73 && e.ctrlKey || e.which==73 && e.ctrlKey) {
+          enterItalic(this);
+          e.preventDefault();
+        }
+
+        else if (e.which == 27) {
+          escapeMath(this);
+          e.preventDefault();
+        }
+    	else if (e.which == 96) {
+          enterMath(this, "integral ");
+          e.preventDefault();
+        }
+    	else if (e.which == 97) {
+          enterMath(this, "integral from 0 to pi of ");
+          e.preventDefault();
+        }
+    	else if (e.which == 98) {
+          enterMath(this, "integral from 0 to 1 of ");
+          e.preventDefault();
+        }
+    	else if (e.which == 99) {
+          enterMath(this, "integral from 0 to infinity of ");
+          e.preventDefault();
+        }
+    	else if (e.which == 100) {
+          enterMath(this, "summation ");
+          e.preventDefault();
+        }
+    	else if (e.which == 101) {
+          enterMath(this, "summation from n = 0 to k of");
+          e.preventDefault();
+        }
+    	else if (e.which == 102) {
+          enterMath(this, "matrix: ");
+          e.preventDefault();
+        }
+    	else if (e.which == 103) {
+          enterMath(this, "double integral ");
+          e.preventDefault();
+        }
+    	else if (e.which == 104) {
+          enterMath(this, "triple integral ");
+          e.preventDefault();
+        }
+    	else if (e.which == 105) {
+          enterMath(this, "dydx= ");
+          e.preventDefault();
+        }
+		else {}
+
+    });
+    </script>
+
+<title>Parsegon</title><style>
+        body {
+            font-family: 'Lato';
+        }
+
+        .fa-btn {
+            margin-right: 6px;
+        }
+    </style></head>
+    
+    <!-- Styles -->
+        
+
+<body id="app-layout">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.2.1/annyang.min.js"></script>
+
+<style>
+header{
+background: -moz-linear-gradient(-45deg, #5fa7ce 0%, #4592d1 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #5fa7ce 0%,#4592d1 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #5fa7ce 0%,#4592d1 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fa7ce', endColorstr='#4592d1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+</style>
+<style>
+
+
+div[shaded] {
+    background-color:#94A6CE !important;
+}
+
+div[venn] {
+
+    border:1px #94A6CE solid;
+        background-color:white;
+        margin-top:0px;
+        margin-bottom:60px;
+
+}
+
+
+
+div[two]  > div[A]{
+    margin-top:35px;
+    margin-bottom:10px;
+    margin-left:10px;
+    width:80px;
+    height: 80px;
+    border-radius:100%;
+    border:2px #94A6CE solid;
+    float:left;
+    box-sizing: border-box;
+    overflow:hidden;
+    z-index:2;
+    background-color:white;;
+    position: relative;
+}
+
+div[two]  > div[B]{
+    margin-top:35px;
+    margin-bottom:10px;
+    margin-left:10px;
+    width:80px;
+    float:left;
+    margin-left:-20px;
+    height: 80px;
+    border-radius:100%;
+    z-index:1;
+    border:2px #94A6CE solid;
+    box-sizing: border-box;
+    background-color:white;
+    position: relative;
+}
+
+div[two]  > div[A] > div[AB]{
+    margin-bottom:10px;
+    margin-left:58px;
+    width:80px;
+    margin-top:-2px;
+    height: 80px;
+    border-radius:100%;
+    border:2px #94A6CE solid;
+    float:left;
+    box-sizing: border-box;
+    background-color:white;
+
+}
+
+
+div[three]  > div[A]{
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:10px;
+    width:80px;
+    height: 80px;
+    border-radius:100%;
+    border:2px #94A6CE solid;
+    float:left;
+    box-sizing: border-box;
+    overflow:hidden;
+    z-index:3;
+    background-color:white;
+    position: relative;
+}
+
+div[three]  > div[B]{
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:10px;
+    width:80px;
+    float:left;
+    margin-left:-20px;
+    height: 80px;
+    border-radius:100%;
+    z-index:2;
+    border:2px #94A6CE solid;
+    box-sizing: border-box;
+    background-color:white;
+    overflow:hidden;
+    position: relative;
+}
+
+
+div[three]  > div[C]{
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:10px;
+    width:80px;
+    float:left;
+    margin-left:-20px;
+    height: 80px;
+    border-radius:100%;
+    z-index:1;
+    z-index:1;
+    border:2px #94A6CE solid;
+    box-sizing: border-box;
+    background-color:white;
+    margin-top:-40px;
+    margin-left:39px;
+    position: relative;
+}
+
+div[three]  > div[A] > div[AB]{
+    margin-bottom:10px;
+    margin-left:58px;
+    width:80px;
+    margin-top:-2px;
+    height: 80px;
+    border-radius:100%;
+    border:2px #94A6CE solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:2;
+    background-color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+div[three]  > div[A] > div[AB] > div[ABC]{
+    margin-bottom:10px;
+    margin-left:-33px;
+    width:80px;
+    margin-top:49px;
+    height: 80px;
+    border-radius:100%;
+    border:2px #94A6CE solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:2;
+    background-color:white;
+    position:relative;
+}
+
+
+
+div[three]  > div[A] > div[AC]{
+    margin-bottom:10px;
+    width:80px;
+    height: 80px;
+    border-radius:100%;
+    z-index:1;
+    position:relative;
+    margin-top:-39px;
+    margin-left:27px;
+    border:2px #94A6CE solid;
+    float:left;
+    box-sizing: border-box;
+    background-color:white;
+}
+
+
+div[three]  > div[B] > div[BC]{
+    margin-bottom:10px;
+    margin-left:-33px;
+    width:80px;
+    margin-top:49px;
+    height: 80px;
+    border-radius:100%;
+    border:2px #94A6CE solid;
+    float:left;
+    box-sizing: border-box;
+    z-index:2;
+    background-color:white;
+    position:relative;
+}
+
+div[four] * {
+    background-color: white !important;
+    border-color: #94A6CE !important;
+}
+
+div[four] div[shaded] {
+    background-color: #94A6CE !important;
+}
+
+
+</style>
+
+
+<div id="notes">
+
+  <div id="grapher">
+  <div class="addanother"><i class="fa fa-crosshairs"></i> Add Another Graph [TAB]</div>
+  <div class="firstquadrant"><i class="fa fa-line-chart"></i> First Quadrant</div>
+  <div class="firstquadrant" style="display:none;"><i class="fa fa-line-chart"></i> Full Graph</div>
+  <div class="enclose">
+  <div class="parabola mainside normal graphs"><div class="point"></div></div>
+  <div class="parabola upsidedown normal graphs"><div class="point"></div></div>
+  <div class="parabola upsidedown center graphs"><div class="point"></div></div>
+  <div class="line straight normal graphs"><div class="point"></div></div>
+  <div class="line straight up1 graphs">
+    <div class="point"></div>
+  </div>
+  <div class="line straight up2 graphs">
+    <div class="point"></div>
+  </div>
+  <div class="line straight down1 graphs"><div class="point"></div></div>
+  <div class="line straight downhalf graphs"><div class="point"></div></div>
+  <div class="line straight uphalf graphs"><div class="point"></div></div>
+  <div class="line straight upthreehalf graphs"><div class="point"></div></div>
+  <div class="line diagonal graphs"><div class="point"></div></div>
+  <div class="line diagonalright graphs"><div class="point"></div></div>
+  <div class="line flipdiagonalright normal graphs"><div class="point"></div></div>
+  <div class="line flipdiagonalright right1 graphs"><div class="point"></div></div>
+  <div class="asymtopes normal graphs"><div class="point"></div></div>
+  <div class="asymtopes single graphs"><div class="point"></div></div>
+  <div class="point n1show showpoint" style="display:block !important;"><br>1</div>
+  <div class="point zshow showpoint" style="display:block !important;"><br>z</div>
+  <div class="point neshow showpoint" style="display:block !important;"><br>=</div>
+  <div class="point qmshow showpoint" style="display:block !important;"><br>/</div>
+  <div class="point n1"></div>
+  <div class="point n2"></div>
+  <div class="point n3"></div>
+  <div class="point n4"></div>
+  <div class="point n5"></div>
+  <div class="point n6"></div>
+  <div class="point n7"></div>
+  <div class="point n8"></div>
+  <div class="point n9"></div>
+  <div class="point n0"></div>
+  <div class="point nm"></div>
+  <div class="point ne"></div>
+  <div class="point q"></div>
+  <div class="point w"></div>
+  <div class="point e"></div>
+  <div class="point r"></div>
+  <div class="point t"></div>
+  <div class="point y"></div>
+  <div class="point u"></div>
+  <div class="point i"></div>
+  <div class="point o"></div>
+  <div class="point p"></div>
+  <div class="point lb"></div>
+  <div class="point rb"></div>
+  <div class="point a"></div>
+  <div class="point s"></div>
+  <div class="point d"></div>
+  <div class="point f"></div>
+  <div class="point g"></div>
+  <div class="point h"></div>
+  <div class="point j"></div>
+  <div class="point k"></div>
+  <div class="point l"></div>
+  <div class="point sc"></div>
+  <div class="point qt"></div>
+  <div class="point z"></div>
+  <div class="point x"></div>
+  <div class="point c"></div>
+  <div class="point v"></div>
+  <div class="point b"></div>
+  <div class="point n"></div>
+  <div class="point m"></div>
+  <div class="point la"></div>
+  <div class="point ra"></div>
+  <div class="point qm"></div>
+  </div>
+  <input id="graph">
+</div>
+
+  <ul style="display: none;">
+    <div class="logo"><img src="images/parsegon_grey.png">
+      <div class="backcircle">
+          <div class="backcircle"></div>
+      </div>
+    </div>
+
+
+       <a href="/"><i class="fa fa-angle-double-left"></i>
+ Home Panel</a>
+
+
+         <div class="searchbox li" style="display:none;opacity:1;">
+           <form>
+             <input placeholder="Search Notes.." autocomplete="off" name="search" class="searchval">
+           </form>
+         </div>
+
+        <div class="fadein">
+        <div class="add" id="add" style="float: left; display: block;"><i class="fa fa-plus"></i></div>
+        <div class="add" id="search" style="float: left; display: block;"><i class="fa fa-search"></i></div>
+        <div class="add" id="classadd" style="float: left; border: none; display: none;"><i class="fa fa-close"></i></div>
+
+<div class="add sidebar_menu" style="float: left; display: block;"><i class="fa fa-info"></i></div>
+<div class="add" id="touradd" style="float: left; display: none;"><i class="fa fa-book"></i></div>
+
+      </div>
+        <div class="new li" style="display: none;" id="new">
+          <form action="/add" method="POST" id="addform">
+            <input placeholder="Title of Note" autocomplete="off" name="name" id="name">
+            <input name="description" value="na" type="hidden">
+
+            <input type="hidden" name="_token" value="6o2BPjsbAyHPRgwuY30Qc0tnHKGMNj9k63vzGMuR">
+          </form>
+        </div>
+
+
+        <li class="note_40">            QSORT p2            <i class="fa fa-star-o"></i>
+            
+
+        </li><li class="note_37 chosen">            QSORT            <i class="fa fa-star-o"></i>
+            
+
+        </li><li class="note_36">            Analysis 3            <i class="fa fa-star-o"></i>
+            
+
+        </li><li class="note_35">            Analysis 2            <i class="fa fa-star-o"></i>
+            
+
+        </li><li class="note_31">            Analysis            <i class="fa fa-star-o"></i>
+            
+
+        </li><li class="note_13">            Aho stuff            <i class="fa fa-star-o"></i>
+            
+
+        </li><li class="note_12">            Continue            <i class="fa fa-star-o"></i>
+            
+
+        </li><li class="note_11">            Pumping Lemma             <i class="fa fa-star-o"></i>
+            
+
+        </li><li class="note_10">            PL use cases            <i class="fa fa-star-o"></i>
+            
+
+        </li><li class="note_7">            Homomorphisms            <i class="fa fa-star-o"></i>
+            
+
+        </li><li class="note_6">            Aho 2            <i class="fa fa-star-o"></i>
+            
+
+        </li>
+
+    </ul>
+    <section name="writer" style="" id="writer">
+
+      <div class="helper" id="matrix_helper" style="display: none;">
+        <i class="fa fa-close closebox"></i>
+          <div class="ada" style="float:left;">
+              <img src="images/ada.png">
+          </div>
+          <h1> Writing Matrices on Parsegon </h1>
+          <p>When writing matrixes on Parsegon, use colons to introduce, and commas &amp; semicolons for terms!</p>
+        <div class="left">
+          <span>matrix:</span> 2, 3, 4, 2;
+        </div>
+        <div class="right">
+          <div equation="" class="white">
+            <div matrix="" two="">
+              <b>
+                <a>2</a>
+                <a>4</a>
+              </b>
+              <b>
+                <a>3</a>
+                <a>2</a>
+              </b>
+            </div>
+          </div>
+        </div>
+        <div class="left">
+          2 by 3 <span>matrix:</span> x sub b, 3, 4, 2, 3, 2;
+        </div>
+        <div class="right">
+          <div equation="" class="white">
+            <div matrix="" two="">
+              <b>
+                <a>x<sub>b</sub></a>
+                <a>3</a>
+              </b>
+              <b>
+                <a>4</a>
+                <a>2</a>
+              </b>
+              <b>
+                <a>3</a>
+                <a>2</a>
+              </b>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="helper " id="venn_helper" style="display: none;">
+        <i class="fa fa-close closebox"></i>
+        <div class="ada" style="float:left;">
+            <img src="images/ada.png">
+        </div>
+        <h1> Writing Venn Diagrams on Parsegon </h1>
+        <p>When writing venn diagrams on Parsegon, declare variables and then shaded regions!  2, 3, 4-way diagrams supported</p>
+        <div class="left">
+          venn diagram <span>of</span> X, Y, Z <span>with</span> ZY, YZ, Z <span>shaded</span>.
+        </div>
+        <div class="right" style="width:90%;">
+          <div equation="" class="white">
+            <div venn="" three="" background="" style="border: 0px white solid;background-color: cadetblue;    margin-top: -37px;
+    margin-left: 84%;">
+              <div a="" style="border-color: white;background-color: cadetblue;"><span> X</span>
+                <div ab="" style="border-color: white;background-color: cadetblue;">
+                  <div abc="" shaded="" style="border-color:  white;background-color: white !important;color:cadeblue;">
+                  </div>
+                </div>
+                <div ac="" style="border-color:white;background-color: cadetblue;">
+                </div>
+              </div>
+              <div b="" style="border-color: white;background-color: cadetblue;">
+                <span> Y</span>
+                <div bc="" shaded="" style="border-color:  white ;background-color: white !important;color:cadeblue;">
+                </div></div>
+                <div c="" shaded="" style="border: 1px white solid;background-color: white !important;color:cadeblue;">
+                  <span style="color:cadetblue;"> Z </span>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+          <textarea placeholder="Type It Here" id="input" class="leftpane" style="display: none;"></textarea>
+        <div id="result" contenteditable="true" class="rightpane" style="width: 98%; height: auto; margin-left: 2%;"><div class="text">RQUICKSORT</div><br><div class="text">pick a random element x at pivot</div><br><div class="text">Partition the array with respect to x</div><br><div class="text">|||________</div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  &lt;  </div></div><div class="text">x____|x|______</div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  &gt;  </div></div><div class="text">x_______|||</div><br><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  t(I, w) <span eqls="">=</span> <hr bgthta="">(x)  </div></div><div class="text"> I = instance, w = set of random choices</div><br><div class="text">expected running time </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  T(n) <span eqls="">=</span> max E<sub>w</sub> t(I, w)  </div></div><br><div class="text">max = </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  |I| <span eqls="">=</span> n  </div></div><br><div class="text">Current case with respect to input of size n</div><br><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term=""> z<sub>i</sub> <span eqls="">=</span>  </div></div><div class="text"> i-th smallest element of array. Final sorted array </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  z<sub>1,</sub> z<sub>2</sub> ...  </div> <div term=""></div><div term="">  z<sub>n</sub>  </div></div><br><br><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  x<sub>ij</sub> <span eqls="">=</span></div><div pwise="" two="" style="margin-left: <span static>16</span>px;"><b><a>1</a><a> <span static="">0</span>  </a></b><b><a> if z<sub>i</sub> z<sub>j</sub> uncompared </a><a> otherwise</a></b></div> <div term="">  </div></div><br><br><div class="text">x = # comparisons = </div><div equation="" style=""> <div term=""></div><div term="">  </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ i &lt; j
+</div>
+<div upperbound="">
+ 
+</div>
+</div><div term=""></div><div term=""> x<sub>ij</sub>  </div></div><br><br><div equation="" style=""> <div term=""></div><div term="">  E(x) <span eqls="">=</span> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ i &gt; j
+</div>
+<div upperbound="">
+
+</div>
+</div><div term=""></div><div term=""> x<sub>ij</sub> <span eqls="">=</span> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ i &gt; j
+</div>
+<div upperbound="">
+
+</div>
+</div><div term=""></div><div term=""> Pr(Z<sub>i</sub> , Z<sub>j</sub> , compared)  </div></div><br><br><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  Pr(Z<sub>i</sub>  , Z<sub>j</sub> , compared) <span eqls="">=</span> Pr(  </div></div><div class="text"> when pivot is in change </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  i - j  </div></div><div class="text">) = </div><br><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;">   <div term=""></div><div term="">  </div><div fraction=""><div top="">  <span static="">2</span>  </div><div bottom="">  j - i + <span static="">1</span>  </div></div><div term="">  </div>  </div><br><br><div equation="" style="">   <div term=""></div><div term="">  x <span eqls="">=</span> <hr bsgma=""><sub>i&lt;j</sub> </div><div fraction=""><div top="">  <span static="">2</span>  </div><div bottom="">  j - i + <span static="">1</span>  </div></div><div term=""> <span eqls="">=</span> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ i <span eqls="">=</span> <span static="">1</span>
+</div>
+<div upperbound="">
+ n - <span static="">1</span>
+</div>
+</div><div term=""></div><div term=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ j <span eqls="">=</span> i + <span static="">1</span>
+</div>
+<div upperbound="">
+ n
+</div>
+</div><div term=""></div><div term=""> </div><div fraction=""><div top="">  <span static="">2</span>  </div><div bottom="">  j - i + <span static="">1</span>  </div></div><div term=""> =  </div>  </div><br><br><div equation="" style="">   <div term=""></div><div term="">  <span static="">2</span> <hr dot=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ i <span eqls="">=</span> <span static="">1</span>
+</div>
+<div upperbound="">
+ n - <span static="">1</span>
+</div>
+</div><div term=""></div><div term=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ k <span eqls="">=</span> <span static="">1</span>
+</div>
+<div upperbound="">
+ n - i
+</div>
+</div><div term=""></div><div term=""> </div><div fraction=""><div top="">  <span static="">1</span>  </div><div bottom="">  k+<span static="">1</span>  </div></div><div term="">  </div>  </div><div class="text"> as </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  k <span eqls="">=</span> j - i  </div></div><br><br><div equation="" style="">   <div term=""></div><div term="">  <hr leq=""> <span static="">2</span> <hr dot=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ i <span eqls="">=</span> <span static="">1</span>
+</div>
+<div upperbound="">
+ n - <span static="">1</span>
+</div>
+</div><div term=""></div><div term=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ k <span eqls="">=</span> <span static="">1</span>
+</div>
+<div upperbound="">
+ n
+</div>
+</div><div term=""></div><div term=""> </div><div fraction=""><div top="">  <span static="">1</span>  </div><div bottom="">  k  </div></div><div term=""> <hr approx=""> <span static="">2</span>n <span style="font-style:normal;float:none;">ln</span> n  </div>  </div><br><div class="text">______________________________________</div><br><div class="text">median = </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term=""> <b ceiling="">n/2</b>  </div></div><div class="text"> - smallest element </div><br><br><div class="text">select i-th smallest element </div><br><br><div class="text">R-SELECT</div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  (A, p, r, i)  </div></div><br><div class="text">if p = r then return A[p]</div><br><div class="text">p = R-PARTITION</div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  (A, p, r)  </div></div><br><div class="text">k = q - p + 1</div><br><div class="text">if i = k then return A[q]</div><br><div class="text">else if i &lt; k then return R-SELECT</div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  (A, p, q-<span static="">1</span> , i)  </div></div><br><div class="text">else return R-SELECT</div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  (A, p + <span static="">1</span>, r, q -k)  </div></div><br><div class="text">________________________________</div><br><br><div class="text">What is the worst case? When your partition keeps being unbalanced. </div><br><br><div class="text">Worst case: </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  T(n) <span eqls="">=</span> T(n - <span static="">1</span>) + n <hr goesto=""> <hr bgthta="">(n<sup>2</sup>)  </div></div><br><div class="text">more typical: </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  T(n) <span eqls="">=</span> T(<span static="">2</span>n/3) + n <hr goesto=""> <hr bgthta="">(n)  </div></div><br><div equation="" style=""> <div term=""></div><div term=""> T(n) <hr leq=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ k <span eqls="">=</span> <span static="">0</span>
+</div>
+<div upperbound="">
+ n -<span static="">1</span>
+</div>
+</div><div term=""></div><div term="">  T(max(k, n-k-<span static="">1</span>) + n) <span eqls="">=</span>  </div></div><div class="text"> </div><br><br><div equation="" style="">   <div term=""></div><div term=""> </div><div fraction=""><div top="">  <span static="">1</span>  </div><div bottom="">  n  </div></div><div term=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ n <span eqls="">=</span> <span static="">0</span>
+</div>
+<div upperbound="">
+ n/2
+</div>
+</div><div term=""></div><div term=""> T<span style="font-style:normal;float:none;">[</span>n - k - <span static="">1</span><span style="font-style:normal;float:none;">]</span>  </div>  </div><br><br><div equation="" style="">   <div term=""></div><div term="">  </div><div fraction=""><div top="">  <span static="">2</span>  </div><div bottom="">  n  </div></div><div term=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ k=n/2+<span static="">1</span>
+</div>
+<div upperbound="">
+ n - <span static="">1</span>
+</div>
+</div><div term=""></div><div term=""> T<span style="font-style:normal;float:none;">[</span>k<span style="font-style:normal;float:none;">]</span> + n  </div>  </div><br><br><div equation="" style="">   <div term=""></div><div term="">  Tn <hr leq=""> </div><div fraction=""><div top="">  <span static="">2</span>  </div><div bottom="">  n  </div></div><div term=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ k=n/2+<span static="">1</span>
+</div>
+<div upperbound="">
+ n - <span static="">1</span>
+</div>
+</div><div term=""></div><div term=""> c <hr dot=""> k + n <span eqls="">=</span> </div><div fraction=""><div top="">  <span static="">2</span>c  </div><div bottom="">  n  </div></div><div term=""> <hr dot=""> </div><div fraction=""><div top="">  n <hr dot=""> <span static="">3</span>n  </div><div bottom="">  <span static="">2</span> <hr dot=""> <span static="">2</span>  </div></div><div term=""> + n <span eqls="">=</span> c <hr dot=""> </div><div fraction=""><div top="">  <span static="">3</span>n  </div><div bottom="">  <span static="">4</span>  </div></div><div term=""> + n  </div>  </div><br><br><div class="text">We want it to be </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  <hr leq=""> cn  </div></div><br><br><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;">   <div term=""></div><div term="">  c <hr dot=""> </div><div fraction=""><div top="">  <span static="">3</span>  </div><div bottom="">  <span static="">4</span>  </div></div><div term=""> + <span static="">1</span> <hr leq=""> c  </div>  </div><br><br><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;">   <div term=""></div><div term="">  <span static="">1</span> <hr leq=""> </div><div fraction=""><div top="">  c  </div><div bottom="">  <span static="">4</span>  </div></div><div term=""> <hr goesto=""> c <hr leq=""> <span static="">4</span>  </div>  </div></div>
+        <div style="display:none;height:0vh;width:60%;float:left;padding:0px;box-sizing:border-box;font-family:monospace;">
+          <pre style="height:0vh;"><code class="Rcode hljs r" style="height:64vh;"><span style="opacity:.3;"><span class="hljs-comment">### LaTeX CODE ###</span></span><br><span class="latex"><span class="hljs-comment">\sum_{k=n/2+1}^{n - 1} c %hrdot%% k + n </span><span eqls=""><span class="hljs-comment">=</span></span><span class="hljs-comment"> 2c over n %hrdot%% 137###parens137 over 161###parens161 + n </span><span eqls=""><span class="hljs-comment">=</span></span><span class="hljs-comment"> c %hrdot%% 3n over 4 + n  </span></span><br><span style="opacity:.3;"><span class="hljs-comment">### END LaTeX CODE###</span></span><br><span style="opacity:.3;"><span class="hljs-comment">### R CODE ###</span></span><br><span class="hljs-comment">Not Supported</span>
+<span style="opacity:.3;"><span class="hljs-comment">### END R CODE###</span></span><br><span style="opacity:.3;"><span class="hljs-comment">### Wolfram CODE ###</span></span><br><span class="hljs-comment">Sum[c %hrdot%% k + n </span><span eqls=""><span class="hljs-comment">=</span></span><span class="hljs-comment"> 2c over n %hrdot%% 137###parens137 over 161###parens161 + n </span><span eqls=""><span class="hljs-comment">=</span></span><span class="hljs-comment"> c %hrdot%% 3n over 4 + n  ,{n,k=n/2+1,n - 1}]</span><br><span style="opacity:.3;"><span class="hljs-comment">### END Wolfram CODE###</span></span><p class="answer" style="color:lightgreen !important;"><span class="hljs-comment">Answer: N/A</span></p></code></pre>
+        </div>
+        <div class="startpanel" style="display: none;">
+          <div class="ada" style="float:left;">
+              <img src="images/ada.png">
+          </div>
+          <div class="rest">
+          Start typing on the left hand panel to begin work on this note.
+        </div>
+        </div>
+        <div class="noticepanel" style="width: 100%; display: none;">
+          <div class="ada" style="float:left;">
+              <img src="images/ada.png">
+          </div>
+          <div class="rest">
+          Hey There!  Feel free to edit on the right panel to modify your work before you print something out.
+          However, keep in mind that when you change your source text, your right-side changes will be written over!
+        </div>
+        </div>
+        <div class="sidepanel" style="display: none;">
+          <!--
+            <div class="group">
+              <h1>NAME</h1>
+              <input class="notename" placeholder="Name of Note" v-on:keyup="rename()"  v-model="chosen.title">
+            </div>
+            <div class="group">
+              <h1>ESSENTIALS</h1>
+              <a><i class="fa fa-save"></i></a>
+              <a v-on:click="print()"><i class="fa fa-print"></i></a>
+              <a v-on:click="delete()"><i class="fa fa-trash"></i></a>
+            </div>-->
+            <div class="group definitions_group">
+              <h1>DEFINITIONS</h1>
+              <div class="definitions"><p><span style="color:lightblue">sicosq</span> <span style="color:beige">as</span> <i>sin squared ($1) + cos squared ($1)</i></p><p><span style="color:lightblue">sico</span> <span style="color:beige">as</span> <i>sin($1) + cos($1)</i></p></div>
+            </div>
+            <div class="group">
+              <h1>PAST VERSIONS</h1>
+              
+            </div>
+
+            <a class="close_sidepanel"><i class="fa fa-close"></i></a>
+
+        </div>
+
+        <div class="tourpanel" style="display: none;">
+          <div class="main">
+
+            <div class="content content-basics" style="display: block;">
+              <h1>The Basics</h1>
+              <p>Parsegon allows you to write math through flexible English.  Unlike
+              other math taking platforms, write math with freedom and achieve the same
+               result in a multitude of different formats. </p>
+            </div>
+            <div class="content content-terms" style="display: none;">
+              <h1>Quick Terms</h1>
+              <p>Parsegon offers the ability to write math in abbreviated English to save
+                typing time for power users. Once learned, these can severely accelerate
+                your use of Parsegon.</p>
+                <div class="left" style="border-bottom:1px #ddd solid;height:25px;">Keyword</div>
+                <div class="right" style="border-bottom:1px #ddd solid;height:25px;">Result</div>
+                <div class="left">intl</div><div class="right">integral</div>
+                <div class="left">dintl</div><div class="right">double integral</div>
+                <div class="left">tintl</div><div class="right">triple integral</div>
+                <div class="left">cintl</div><div class="right">contour integral</div>
+                <div class="left">sintl</div><div class="right">surface integral</div>
+                <div class="left">vintl</div><div class="right">volume integral</div>
+                <div class="left">m:</div><div class="right">matrix:</div>
+                <div class="left">tfo</div><div class="right">the fraction of</div>
+                <div class="left">prdt</div><div class="right">product</div>
+                <div class="info">SPECIAL CALCULUS</div>
+                <div class="left">iintl</div><div class="right">integral from 0 to infinity</div>
+                <div class="left">2iintl</div><div class="right">integral from -infinity to infinity</div>
+                <div class="left">pintl</div><div class="right">integral from 0 to pi</div>
+                <div class="left">2pintl</div><div class="right">integral from 0 to 2pi</div>
+                <div class="left">1intl</div><div class="right">integral from 0 to 1</div>
+                <div class="left">nsum</div><div class="right">sum with index n = 0 for infinity</div>
+                <div class="left">nksum</div><div class="right">sum with index k = 0 for n</div>
+                <div class="left">nproduct</div><div class="right">product with index n = 0 for infinity</div>
+                <div class="left">nkproduct</div><div class="right">product with index k = 0 for n</div>
+
+                <div class="info">SPECIAL TRIGNOMETRY</div>
+                <div class="left">ssin</div><div class="right">sin squared</div>
+                <div class="left">scos</div><div class="right">cos squared</div>
+                <div class="left">stan</div><div class="right">tan squared</div>
+                <div class="left">scot</div><div class="right">cot squared</div>
+                <div class="left">scsc</div><div class="right">csc squared</div>
+                <div class="left">ssec</div><div class="right">sec squared</div>
+                <div class="left">sico($1)</div><div class="right">sin($1) + cos($1)</div>
+
+
+            </div>
+            <div class="content content-integrals" style="display: none;">
+              <h1>Integrals</h1>
+              <p>Creating integrals on Parsegon couldn't get easier.  Easily set
+                lower and upper bounds, domains, etc. Creating double or even surface integrals
+                is logical.</p>
+              <i class="eq">`integral from 0 to 10 of 3x squared + e to the x`</i>
+              <div equation="" class="white"> <div term=""></div><div term="">  </div> <div term=""> </div><div integral="">
+<div lowerbound="">
+ <span static="">0</span>
+</div>
+<div upperbound="">
+ <span static="">10</span>
+</div>
+</div><div term=""></div><div term=""> <span static="">3</span>x<sup>2</sup> + e<sup>x</sup>  </div><div term=""> dx</div></div>
+              <p>To create a different integral, should swap the term! For instance, to create
+              a double integral:</p>
+              <i class="eq">`double integral from 0 to 10 from 0 to infinity of 3x squared + e to the x`</i>
+              <div equation="" class="white"> <div term=""></div><div term="">  </div> <div term=""></div><div doubleintegral="">
+<div lowerbound="">
+ <span static="">0</span>
+</div>
+<div upperbound="">
+ <span static="">10</span>
+</div>
+<div lowerboundtwo="">
+ <span static="">0</span>
+</div>
+<div upperboundtwo="">
+ <hr infty="">
+</div>
+</div><div term=""></div><div term=""> <span static="">3</span>x<sup>2</sup> + e<sup>x</sup>  </div><div term=""> dx de</div></div>
+              <p>All the necessary integrals are included:
+                <span>double integral</span>,
+                <span>triple integral</span>,
+                <span>contour integral</span>,
+                <span>surface integral</span>,
+                <span>volume integral</span>.  <br><br>Further, to
+                specify a domain or region, just add:
+              </p>
+              <i class="eq">`integral of 2x 2y dA in region D`</i>
+              <div equation="" class="white"> <div term=""></div><div term="">  </div> <div term=""> </div><div integral="">
+<div region="">
+ D  
+</div>
+</div><div term=""></div><div term=""> <span static="">2</span>x <span static="">2</span>y dA region D  </div></div>
+            </div>
+          </div>
+          <nav>
+            <h1>INTRODUCTION</h1>
+            <a class="chosen" term="basics">The Basics</a>
+            <a>Starting an Equation</a>
+            <a>Quick Mapping</a>
+            <a term="terms">Quick Terms</a>
+
+            <h1>ADA - VIRTUAL ASSISTANCE</h1>
+            <a>Equation Lookup</a>
+            <a>Term Lookup</a>
+            <a>Special Matrices</a>
+
+            <h1>BASIC MATH</h1>
+            <a>Greeks &amp; Terms</a>
+            <a>Trignometry</a>
+            <a>Fractions</a>
+            <a>Exponents</a>
+            <a>Parentheses</a>
+
+            <h1>CALCULUS</h1>
+            <a term="integrals">Integrals</a>
+            <a>Summations &amp; Products</a>
+            <a>Limits</a>
+            <a>Derivatives</a>
+
+            <h1>LINEAR ALGEBRA</h1>
+            <a>Matrices</a>
+            <a>Bases</a>
+            <a>Special Terms</a>
+            <a>Perpendicular and Parallel</a>
+
+            <h1>DISCRETE MATH</h1>
+            <a>Terminology</a>
+            <a>Boolean Algebra</a>
+            <a>Set Theory</a>
+            <a>Dictionary</a>
+            <a>Venn Diagrams</a>
+          </nav>
+        </div>
+
+
+        <div class="ada_token" id="ada" style="display: none;">
+          <div class="ada">
+              <img src="images/ada.png">
+          </div>
+        </div>
+
+
+
+        <div class="bug_report" style="display:none;">
+          <div class="bugform">
+            <textarea class="bugmoniter" placeholder="Bug/Issue/Feature you would like to report/suggest right now." style="display: none;"></textarea>
+            <p>Please note that a copy of your current note you are focused on will be submitted to help us
+            debug any issues with the current code.</p>
+            <div class="submit">Send Bug Report!</div>
+          </div>
+          <div class="icon">
+            <i class="fa fa-bug"></i>
+          </div>
+
+        </div>
+    </section>
+
+  <section name="bottommenu" style="display: none;">
+    <div class="swatches" style="width:100%;">
+  	<a class="swatch"><i class="fa fa-save"></i> Save</a>
+  	<a class="swatch"><i class="fa fa-print"></i> Print</a>
+    <a class="swatch"><i class="fa fa-trash"></i> Delete</a>
+    <input placeholder="Name of Note">
+
+    </div>
+
+  </section>
+
+
+    <section name="instruction" id="instruction" style="background-image: url(&quot;images/maze.png&quot;); display: none;">
+      <h1>Start a new note or select one to begin!</h1>
+      <h2>Remember to enclose your equations with backquotes! ( ` )</h2>
+    </section>
+
+</div>
+
+<script>
+var $divs = $('.leftpane, .rightpane');
+var sync = function(e){
+    var $other = $divs.not(this).off('scroll'), other = $other.get(0);
+    var percentage = this.scrollTop / (this.scrollHeight - this.offsetHeight);
+    other.scrollTop = percentage * (other.scrollHeight - other.offsetHeight);
+    setTimeout( function(){ $other.on('scroll', sync ); },1);
+}
+$(".leftpane").on( 'scroll', sync);
+</script>
+
+<script>
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+/*!
+ * jQuery Browser Plugin 0.1.0
+ * https://github.com/gabceb/jquery-browser-plugin
+ *
+ * Original jquery-browser code Copyright 2005, 2015 jQuery Foundation, Inc. and other contributors
+ * http://jquery.org/license
+ *
+ * Modifications Copyright 2015 Gabriel Cebrian
+ * https://github.com/gabceb
+ *
+ * Released under the MIT license
+ *
+ * Date: 05-07-2015
+ */
+/*global window: false */
+
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['jquery'], function ($) {
+      return factory($);
+    });
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    // Node-like environment
+    module.exports = factory(require('jquery'));
+  } else {
+    // Browser globals
+    factory(window.jQuery);
+  }
+}(function(jQuery) {
+  "use strict";
+
+  function uaMatch( ua ) {
+    // If an UA is not provided, default to the current browser UA.
+    if ( ua === undefined ) {
+      ua = window.navigator.userAgent;
+    }
+    ua = ua.toLowerCase();
+
+    var match = /(edge)\/([\w.]+)/.exec( ua ) ||
+        /(opr)[\/]([\w.]+)/.exec( ua ) ||
+        /(chrome)[ \/]([\w.]+)/.exec( ua ) ||
+        /(iemobile)[\/]([\w.]+)/.exec( ua ) ||
+        /(version)(applewebkit)[ \/]([\w.]+).*(safari)[ \/]([\w.]+)/.exec( ua ) ||
+        /(webkit)[ \/]([\w.]+).*(version)[ \/]([\w.]+).*(safari)[ \/]([\w.]+)/.exec( ua ) ||
+        /(webkit)[ \/]([\w.]+)/.exec( ua ) ||
+        /(opera)(?:.*version|)[ \/]([\w.]+)/.exec( ua ) ||
+        /(msie) ([\w.]+)/.exec( ua ) ||
+        ua.indexOf("trident") >= 0 && /(rv)(?::| )([\w.]+)/.exec( ua ) ||
+        ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec( ua ) ||
+        [];
+
+    var platform_match = /(ipad)/.exec( ua ) ||
+        /(ipod)/.exec( ua ) ||
+        /(windows phone)/.exec( ua ) ||
+        /(iphone)/.exec( ua ) ||
+        /(kindle)/.exec( ua ) ||
+        /(silk)/.exec( ua ) ||
+        /(android)/.exec( ua ) ||
+        /(win)/.exec( ua ) ||
+        /(mac)/.exec( ua ) ||
+        /(linux)/.exec( ua ) ||
+        /(cros)/.exec( ua ) ||
+        /(playbook)/.exec( ua ) ||
+        /(bb)/.exec( ua ) ||
+        /(blackberry)/.exec( ua ) ||
+        [];
+
+    var browser = {},
+        matched = {
+          browser: match[ 5 ] || match[ 3 ] || match[ 1 ] || "",
+          version: match[ 2 ] || match[ 4 ] || "0",
+          versionNumber: match[ 4 ] || match[ 2 ] || "0",
+          platform: platform_match[ 0 ] || ""
+        };
+
+    if ( matched.browser ) {
+      browser[ matched.browser ] = true;
+      browser.version = matched.version;
+      browser.versionNumber = parseInt(matched.versionNumber, 10);
+    }
+
+    if ( matched.platform ) {
+      browser[ matched.platform ] = true;
+    }
+
+    // These are all considered mobile platforms, meaning they run a mobile browser
+    if ( browser.android || browser.bb || browser.blackberry || browser.ipad || browser.iphone ||
+      browser.ipod || browser.kindle || browser.playbook || browser.silk || browser[ "windows phone" ]) {
+      browser.mobile = true;
+    }
+
+    // These are all considered desktop platforms, meaning they run a desktop browser
+    if ( browser.cros || browser.mac || browser.linux || browser.win ) {
+      browser.desktop = true;
+    }
+
+    // Chrome, Opera 15+ and Safari are webkit based browsers
+    if ( browser.chrome || browser.opr || browser.safari ) {
+      browser.webkit = true;
+    }
+
+    // IE11 has a new token so we will assign it msie to avoid breaking changes
+    if ( browser.rv || browser.iemobile) {
+      var ie = "msie";
+
+      matched.browser = ie;
+      browser[ie] = true;
+    }
+
+    // Edge is officially known as Microsoft Edge, so rewrite the key to match
+    if ( browser.edge ) {
+      delete browser.edge;
+      var msedge = "msedge";
+
+      matched.browser = msedge;
+      browser[msedge] = true;
+    }
+
+    // Blackberry browsers are marked as Safari on BlackBerry
+    if ( browser.safari && browser.blackberry ) {
+      var blackberry = "blackberry";
+
+      matched.browser = blackberry;
+      browser[blackberry] = true;
+    }
+
+    // Playbook browsers are marked as Safari on Playbook
+    if ( browser.safari && browser.playbook ) {
+      var playbook = "playbook";
+
+      matched.browser = playbook;
+      browser[playbook] = true;
+    }
+
+    // BB10 is a newer OS version of BlackBerry
+    if ( browser.bb ) {
+      var bb = "blackberry";
+
+      matched.browser = bb;
+      browser[bb] = true;
+    }
+
+    // Opera 15+ are identified as opr
+    if ( browser.opr ) {
+      var opera = "opera";
+
+      matched.browser = opera;
+      browser[opera] = true;
+    }
+
+    // Stock Android browsers are marked as Safari on Android.
+    if ( browser.safari && browser.android ) {
+      var android = "android";
+
+      matched.browser = android;
+      browser[android] = true;
+    }
+
+    // Kindle browsers are marked as Safari on Kindle
+    if ( browser.safari && browser.kindle ) {
+      var kindle = "kindle";
+
+      matched.browser = kindle;
+      browser[kindle] = true;
+    }
+
+     // Kindle Silk browsers are marked as Safari on Kindle
+    if ( browser.safari && browser.silk ) {
+      var silk = "silk";
+
+      matched.browser = silk;
+      browser[silk] = true;
+    }
+
+    // Assign the name and platform variable
+    browser.name = matched.browser;
+    browser.platform = matched.platform;
+    return browser;
+  }
+
+  // Run the matching process, also assign the function to the returned object
+  // for manual, jQuery-free use if desired
+  window.jQBrowser = uaMatch( window.navigator.userAgent );
+  window.jQBrowser.uaMatch = uaMatch;
+
+  // Only assign to jQuery.browser if jQuery is loaded
+  if ( jQuery ) {
+    jQuery.browser = window.jQBrowser;
+  }
+
+  return window.jQBrowser;
+}));
+</script>
+
+<!-- <script>
+  document.onkeypress = function(e) {myFunction(e)};
+  function myFunction(e) {
+      if (e.keyCode == 96) {
+          console.log("backquote was pressed");
+      }
+    // console.log(e.code);
+  }
+</script> -->
+
+    <script>
+    // var d3 = window.d3
+    // function bufferGraphs(){
+    //   for(i = 0; i < window.graphs.length; i++){
+    //     graph = window.graphs[i];
+    //     eqs = graph[0];
+    //     num = graph[1];
+    //     functions = [];
+    //     for (i = 0; i < eqs.length; i++) {
+    //       eqs[i] = eqs[i].replace(/\s/g, '');
+    //       var func = {fn: eqs[i]};
+    //       functions.push(func);
+    //     }
+    //     // console.log(functions);
+    //     // console.log(graph[3][0]);
+    //     // console.log(graph[3][1]);
+    //
+    //     // eq = eq.replace(/\s/g, '');
+    //     functionPlot({
+    //       target: "#graph_" + num,
+    //       xAxis: {
+    //           domain: graph[3][0]
+    //       },
+    //       yAxis: {
+    //           domain: graph[3][1]
+    //       },
+    //       data: functions,
+    //       // data: [{
+    //       //   // fn: eq, color: '#94A6CE'
+    //       // }],
+    //       grid: true,
+    //       width: 240,
+    //       height: 200,
+    //       tip: {
+    //         xLine: true,    // dashed line parallel to y = 0
+    //         yLine: true,    // dashed line parallel to x = 0
+    //         renderer: function (x, y, index) {
+    //
+    //         }
+    //       },
+    //     });
+    //
+    //
+    //   }
+    // };
+
+
+
+
+
+
+    //VUE
+    var tours = new Vue({
+      el: '#notes',
+      data: {
+        notes: [{"id":"36","created_at":"2016-09-22 15:04:16","updated_at":"2016-09-22 15:04:16","title":"Analysis 3","description":"jquery","content":"4a. `n`\n4b. \ny = 0;\nfor i to n\nz = 1\nfor j = 1 to i\n       z = x * z\ny = y + z*a_k\n\nrunning time is n^2 since i is a factor n and it runs inside an n loop. It sucks. facebook wont hire u\n\n\nc. \n\nInitialization: y = 0 and i = n . n is the LARGEST of the polynomial's limit.\n\nMaintenance: With each step, i decrements until it is 0. This implies that i will never increment, and therefore:\n\n`i less than or equal to n`\n\nat all steps of the summation. \n\nTermination: I will terminate once it reaches 0, thereby, going under n steps.  The resulting summation will be thus:\n\n\n`summation from k = 0 to n - 1 of a sub (k + 1) x^k`\n\nThis is mathematically equivalent to the first equation, since including the first step at initialization. \n\nwhich is merely just `a sub k`\nwe get the necessary sum. \n\n\nd. Since the summation is equivalent to the latter summation at termination, this implies it calculates the polynomial because the definition of a summation is the sum of iterated terms multiplied by certain coefficients.","owner":"1","last_version":"34","next_version":"0","create":"1474556656","event":"edited","favorite":"0","versions":[{"id":34,"created_at":"2016-09-22 14:53:35","updated_at":"2016-09-22 15:04:16","title":"Analysis 3","description":"jquery","content":"4a. `n`\n4b. \ny = 0;\nfor i to n\nz = 1\nfor j = 1 to i\n       z = x * z\ny = y + z*a_k\n\nrunning time is n^2 since i is a factor n and it runs inside an n loop. It sucks. facebook wont hire u\n\n\nc. \n\nInitialization: y = 0 and i = n . n is the LARGEST of the polynomial's limit.\n\nMaintenance: With each step, i decrements until it is 0. This implies that i will never increment, and therefore:\n\n`i less than or equal to n`\n\nat all steps of the summation. \n\nTermination: I will terminate once it reaches 0, thereby, going under n steps.  The resulting summation will be thus:\n\n\n`summation from k = 0 to n - 1 of a sub (k + 1) x^k`\n\nThis is mathematically equivalent to the first equation, since including the first step at initialization. \n\nwhich is merely just `a sub k`\nwe get the necessary sum. \n\n\nd. Since the summation is equivalent to the latter summation at termination, this implies it calculates the polynomial because the definition of a summation is the sum of iterated terms multiplied by certain coefficients.","owner":"0","last_version":"33","next_version":"36","create":"1474556015","event":"edited","favorite":"0","diffForHumans":"43 minutes ago"},{"id":33,"created_at":"2016-09-22 14:43:34","updated_at":"2016-09-22 14:53:35","title":"Analysis 3","description":"jquery","content":"4a. `n`\n4b. \ny = 0;\nfor i to n\nz = 1\nfor j = 1 to i\n       z = x * z\ny = y + z*a_k\n\nrunning time is n^2 since i is a factor n and it runs inside an n loop. It sucks. facebook wont hire u\n\n\nc. \n\nInitialization: y = 0 and i = n . n is the LARGEST of the polynomial's limit.\n\nMaintenance: With each step, i decrements until it is 0. This implies that i will never increment, and therefore:\n\n`i less than or equal to n`\n\nat all steps of the summation. I will terminate once it reaches 0, thereby, going under n steps.  The resulting summation will be thus:\n\n\n`summation from k = 0 to n - 1 of a sub (k + 1) x^k`\n\nThis is mathematically equivalent to the first equation, since, at `k = 0` the exponent is 0, renering \n\nTermination: When i = 0, n reaches n - 1 steps which becomes n steps once the last step is executed.  \n\n\nd. Since the summation is equivalent to the latter summation at termination, this implies it calculates the polynomial because the definition of a summation is the sum of iterated terms multiplied by certain coefficients.","owner":"0","last_version":"0","next_version":"34","create":"1474555414","event":"created","favorite":"0","diffForHumans":"54 minutes ago"}]},{"id":"35","created_at":"2016-09-22 14:56:32","updated_at":"2016-09-22 15:04:27","title":"Analysis 2","description":"jquery","content":"1a. `n dot one half n = one half n squared = Theta [n squared ]  `\nProof:\n1. s = 0 \n2. for i = 1 to n\n3. for j = i to n\n4. if(A[i] > A[j]) then s = s + 1\n5. return s\n\nline 1. 1\nline 2. `summation from i = 1 to n of innerloop`\n\n\nline 3.`summation from j = i to n of 1 = n - i`\n\nThis implies that you have n(n - i) + 2. but the constant doesn't matter  \n\ni's average value is .5 which collapses to \n\n`n dot one half n` thereby proving the original statement\n\n1b. `n dot one half n dot one fourth n = one eighth n cubed = Theta[n cubed ]`\n\nProof  2\n1. s = 0\n2. for i = 1 to n\n3. for j = i to n\n4. for k = i to j\n5. if(A[k] - A[i] = A[j])\n6. return s\n\nline 1. 1\nline 2. `summation from i = 1 to n of innerloop`\n\nline 3. `summation from j = i to n of innerinnerloop`\n\nline 4. `summation from k = i to j of 1`\n\nline 6. 1\n\nThis is equivalent to `Theta[n cubed ]`\nThe upperbound is to initialize j and k at 1. This will always run near `n cubed` because j is a function of n.\n\nThe lowerbound is to set k = j so that the internal loop always runs in 1 time, \nrendering `n squared` which is `n cubed` on the base case.\nAnother proof is that j is a function of n and i is sometimes set to 1, so as n \napproaches infinity, all three loops approach n, rendering `n cubed`\n\n2 `17, log log n, log sub 10 n = log n, (log n) squared , square root of n , n, n (log n) squared ,`\n`(4n + 7) squared  =  2^(2 log n) , (3\/2)^n , 4^n = 2^(2n + 5) , n^(log n) , n! , n^n` \n\nlog 10 n and log n are equivalent since as n approaches inf, the base matters none.  2^2 log n simplifies to 4^log n = n^log 4. Exponent is alike to 2 if log is base 2.  2^2n simplifies to 4^n.\n\n3a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j >= 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n}\nreturn false\n\n3b.  \nMERGESORT(C);\nA = []; B = [];\nfor i = 0 to ceil[n\/2]{\n A.push(C[i])\n}   \nfor ceil[n\/2 + 1 {\n B.push(C[i])\n}   \ncheckif100(A,B);\n\n4a. `n`\n4b. \ny = 0;\nfor i to n\nz = 1\nfor j = 1 to i\n       z = x * z\ny = y + z*a_k\n\nrunning time is n^2 since i is a factor n and it runs inside an n loop. It sucks. facebook wont hire u\n\nc. \n\nInitialization: y = 0 and i = n . n is the LARGEST of the polynomial's limit.\n\nMaintenance: With each step, i decrements until it is 0. This implies that i will never increment, and therefore:\n\n`i less than or equal to n`\n\nat all steps of the summation. \n\nTermination: I will terminate once it reaches 0, thereby, going under n steps.  The resulting summation will be thus:\n\n\n`summation from k = 0 to n - 1 of a sub (k + 1) x^k`\n\nThis is mathematically equivalent to the first equation, since including the first step at initialization. \n\nwhich is merely just `a sub k`\nwe get the necessary sum. \n\n\nd. Since the summation is equivalent to the latter summation at termination, this implies it calculates the polynomial because the definition of a summation is the sum of iterated terms multiplied by certain coefficients.","owner":"1","last_version":"32","next_version":"0","create":"1474556192","event":"edited","favorite":"0","versions":[{"id":32,"created_at":"2016-09-22 14:43:29","updated_at":"2016-09-22 14:56:32","title":"Analysis 2","description":"jquery","content":"1a. `n dot one half n = one half n squared = Theta [n squared ]  `\nProof:\n1. s = 0 \n2. for i = 1 to n\n3. for j = i to n\n4. if(A[i] > A[j]) then s = s + 1\n5. return s\n\nline 1. 1\nline 2. `summation from i = 1 to n of innerloop`\n\nline 3.`summation from j = i to n of 1 = n - i`\n\nThis implies that you have n(n - i) + 2. but the constant doesn't matter  \n\ni's average value is .5 which collapses to \n\n`n dot one half n` thereby proving the original statement\n\n1b. `n dot one half n dot one fourth n = one eighth n cubed = Theta[n cubed ]`\n\nProof  2\n1. s = 0\n2. for i = 1 to n\n3. for j = i to n\n4. for k = i to j\n5. if(A[k] - A[i] = A[j])\n6. return s\n\nline 1. 1\nline 2. `summation from i = 1 to n of innerloop`\n\nline 3. `summation from j = i to n of innerinnerloop`\n\nline 4. `summation from k = i to j of 1`\n\nline 6. 1\n\nThis is equivalent to `Theta[n cubed ]`\nThe upperbound is to initialize j and k at 1. This will always run near `n cubed` because j is a function of n.\n\nThe lowerbound is to set k = j so that the internal loop always runs in 1 time, \nrendering `n squared` which is `n cubed` on the base case.\nAnother proof is that j is a function of n and i is sometimes set to 1, so as n \napproaches infinity, all three loops approach n, rendering `n cubed`\n\n2 `17, log log n, log sub 10 n = log n, (log n) squared , square root of n , n, n (log n) squared ,`\n`(4n + 7) squared  =  2^(2 log n) , (3\/2)^n , 4^n = 2^(2n + 5) , n^(log n) , n! , n^n` \n\nlog 10 n and log n are equivalent since as n approaches inf, the base matters none.  2^2 log n simplifies to 4^log n = n^log 4. Exponent is alike to 2 if log is base 2.  2^2n simplifies to 4^n.\n\n3a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j >= 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n}\nreturn false\n\n3b.  \nMERGESORT(C);\nA = []; B = [];\nfor i = 0 to ceil[n\/2]{\n A.push(C[i])\n}   \nfor ceil[n\/2 + 1 {\n B.push(C[i])\n}   \ncheckif100(A,B);\n4a. `n`\n4b. \ny = 0;\nfor i to n\nz = 1\nfor j = 1 to i\n       z = x * z\ny = y + z*a_k\n\nrunning time is n^2 since i is a factor n and it runs inside an n loop. It sucks. facebook wont hire u\n\n\nc. \n\nInitialization: y = 0 and i = n . n is the LARGEST of the polynomial's limit.\n\nMaintenance: With each step, i decrements until it is 0. This implies that i will never increment, and therefore:\n\n`i less than or equal to n`\n\nat all steps of the summation. \n\nTermination: I will terminate once it reaches 0, thereby, going under n steps.  The resulting summation will be thus:\n\n\n`summation from k = 0 to n - 1 of a sub (k + 1) x^k`\n\nThis is mathematically equivalent to the first equation, since including the first step at initialization. \n\nwhich is merely just `a sub k`\nwe get the necessary sum. \n\n\nd. Since the summation is equivalent to the latter summation at termination, this implies it calculates the polynomial because the definition of a summation is the sum of iterated terms multiplied by certain coefficients.","owner":"0","last_version":"30","next_version":"35","create":"1474555409","event":"edited","favorite":"0","diffForHumans":"51 minutes ago"},{"id":30,"created_at":"2016-09-22 05:05:00","updated_at":"2016-09-22 14:43:29","title":"Analysis 2","description":"jquery","content":"1a. `n dot one half n = one half n squared = Theta [n squared ]  `\nProof:\n1. s = 0 \n2. for i = 1 to n\n3. for j = i to n\n4. if(A[i] > A[j]) then s = s + 1\n5. return s\n\nline 1. 1\nline 2. `summation from i = 1 to n of innerloop`\n\nline 3.`summation from j = i to n of 1 = n - i`\n\nThis implies that you have n(n - i) + 2. but the constant doesn't matter  \n\ni's average value is .5 which collapses to \n\n`n dot one half n` thereby proving the original statement\n\n1b. `n dot one half n dot one fourth n = one eighth n cubed = Theta[n cubed ]`\n\nProof  2\n1. s = 0\n2. for i = 1 to n\n3. for j = i to n\n4. for k = i to j\n5. if(A[k] - A[i] = A[j])\n6. return s\n\nline 1. 1\nline 2. `summation from i = 1 to n of innerloop`\n\nline 3. `summation from j = i to n of innerinnerloop`\n\nline 4. `summation from k = i to j of 1`\n\nline 6. 1\n\nThis is equivalent to `Theta[n cubed ]`\nThe upperbound is to initialize j and k at 1. This will always run near `n cubed` because j is a function of n.\n\nThe lowerbound is to set k = j so that the internal loop always runs in 1 time, \nrendering `n squared` which is `n cubed` on the base case.\nAnother proof is that j is a function of n and i is sometimes set to 1, so as n \napproaches infinity, all three loops approach n, rendering `n cubed`\n\n2 `17, log log n, log sub 10 n = log n, (log n) squared , square root of n , n, n (log n) squared ,`\n`(4n + 7) squared  =  2^(2 log n) , (3\/2)^n , 4^n = 2^(2n + 5) , n^(log n) , n! , n^n` \n\nlog 10 n and log n are equivalent since as n approaches inf, the base matters none.  2^2 log n simplifies to 4^log n = n^log 4. Exponent is alike to 2 if log is base 2.  2^2n simplifies to 4^n.\n\n3a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j >= 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n}\nreturn false\n\n3b.  \nMERGESORT(C);\nA = []; B = [];\nfor i = 0 to ceil[n\/2]{\n A.push(C[i])\n}   \nfor ceil[n\/2 + 1 {\n B.push(C[i])\n}   \ncheckif100(A,B);\n\n4a. `n`\n4b. \ny = 0;\nfor i to n\nz = 1\nfor j = 1 to i\n       z = x * z\ny = y + z*a_k\n\nrunning time is n^2 since i is a factor n and it runs inside an n loop. It sucks. facebook wont hire u\n\nc. \n\nInitialization: y = 0 and i = n . The first summation iterates over -1 steps, so it never calculates something. \n\n\nMaintenance: You begin by decreasing n, thereby increasing the amount of steps each summation has linearly by each iteration. This is definitionally equivalent to the latter summation as every decrement in steps is an increment in the relative index since it is edging closer to reaching n. \n\n\nTermination: When i = 0, n reaches n - 1 steps which becomes n steps once the last step is executed.  \n\n\nd. Since the summation is equivalent to the latter summation at termination, this implies it calculates the polynomial because it is equates to the same sum in all cases. \n ","owner":"0","last_version":"29","next_version":"32","create":"1474520700","event":"edited","favorite":"0","diffForHumans":"1 hour ago"},{"id":29,"created_at":"2016-09-22 04:29:51","updated_at":"2016-09-22 05:05:00","title":"Analysis 2","description":"jquery","content":"3a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j >= 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n}\nreturn false\n\n3b.  \nMERGESORT(C);\nA = []; B = [];\nfor i = 0 to ceil[n\/2]{\n A.push(C[i])\n}   \nfor ceil[n\/2 + 1 {\n B.push(C[i])\n}   \ncheckif100(A,B);\n\n4a. `n`\n4b. \ny = 0;\nfor i to n\nz = 1\nfor j = 1 to i\n       z = x * z\ny = y + z*a_k\n\nrunning time is n^2 since i is a factor n and it runs inside an n loop. It sucks. facebook wont hire u\n\nc. \n\nInitialization: y = 0 and i = n . The first summation iterates over -1 steps, so it never calculates something. \n\n\nMaintenance: You begin by decreasing n, thereby increasing the amount of steps each summation has linearly by each iteration. This is definitionally equivalent to the latter summation as every decrement in steps is an increment in the relative index since it is edging closer to reaching n. \n\n\nTermination: When i = 0, n reaches n - 1 steps which becomes n steps once the last step is executed, involving adding x^k  \n ","owner":"0","last_version":"28","next_version":"30","create":"1474518591","event":"edited","favorite":"0","diffForHumans":"10 hours ago"},{"id":28,"created_at":"2016-09-22 04:16:16","updated_at":"2016-09-22 04:29:51","title":"Analysis 2","description":"jquery","content":"3a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j >= 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n}\nreturn false\n\n3b.  \nMERGESORT(C);\nA = []; B = [];\nfor i = 0 to ceil[n\/2]{\n A.push(C[i])\n}   \nfor ceil[n\/2 + 1 {\n B.push(C[i])\n}   \ncheckif100(A,B);\n\n4a. `n`\n4b. \ny = 0;\nfor i to n\nz = 1\nfor j = 1 to i\n       z = x * z\ny = y + z*a_k\n\nrunning time is n^2 since i is a factor n and it runs inside an n loop. It sucks. facebook wont hire u\n\nc. \n\nInitialization: y = 0 and i = n . The first summation iterates over -1 steps, so it never calculates something. \n\n\nMaintenance: You begin by decreasing n, thereby increasing the amount of steps each summation has linearly by each iteration. This is definitionally equivalent to the latter s \n ","owner":"0","last_version":"26","next_version":"29","create":"1474517776","event":"edited","favorite":"0","diffForHumans":"11 hours ago"},{"id":26,"created_at":"2016-09-22 03:50:54","updated_at":"2016-09-22 04:16:16","title":"Analysis 2","description":"jquery","content":"3a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j >= 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n}\nreturn false\n\n3b.  \nMERGESORT(C);\nA = []; B = [];\nfor i = 0 to ceil[n\/2]{\n A.push(C[i])\n}   \nfor ceil[n\/2 + 1 {\n B.push(C[i])\n}   \ncheckif100(A,B);\n\n\n4a. `n`\n4b. \ny = 0;\nfor i to n\nz = 1\nfor j = 1 to i\n       z = x * z\ny = y + z*a_k\n\nrunning time is n^2 since i is a factor n and it runs inside an n loop. It sucks. facebook wont hire u\n\nc. \n\nInitialization: y = 0 and i = n . The first summation iterates over -1 steps, so it never calculates something. \n\n\nMaintenance: You begin by decreasing n, thereby increasing the amount of steps each summation has linearly by each iteration. This is definitionally equivalent to the latter intersection \n ","owner":"0","last_version":"23","next_version":"28","create":"1474516254","event":"edited","favorite":"0","diffForHumans":"11 hours ago"},{"id":23,"created_at":"2016-09-22 03:21:24","updated_at":"2016-09-22 03:50:54","title":"Analysis 2","description":"jquery","content":"3) a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j >= 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n}\nreturn false\n\nb.  \nA = [];\nfor i = 0 to n\/2{\n A.push(C[i])\n}   \nSplit C array in the middle to arrays\nA and B. These each have n\/2 terms.\nMERGESORT(A);\nMERGESORT(B);\ncheckif100(A,B);\n\n4) a. `n`\nb. \ny = 0;\nfor i to n\nz = 1\nfor j = 1 to i\n       z = x * z\ny = y + z*a_k\n\nrunning time is n^2 since i is a factor n and it runs inside an n loop. It sucks. facebook wont hire u\n\nc. \n\nInitialization: y = 0 and i = n . The first summation iterates over -1 steps, so it never calculates something. \n\n\nMaintenance: You begin by decreasing n, thereby increasing the amount of steps each summation has linearly by each iteration. This is definitionally equivalent to the latter intersection \n ","owner":"0","last_version":"22","next_version":"26","create":"1474514484","event":"edited","favorite":"0","diffForHumans":"11 hours ago"},{"id":22,"created_at":"2016-09-22 01:55:53","updated_at":"2016-09-22 03:21:24","title":"Analysis 2","description":"jquery","content":"3) a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j >= 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n}\nreturn false\n\nb.  \nMERGESORT(A,B);\n      checkif100(A,B);\n\n4) a. `n`\nb. \ny = 0;\nfor i to n\nz = 1\nfor j = 1 to i\n       z = x * z\ny = y + z*a_k\n\nrunning time is n^2 since i is a factor n and it runs inside an n loop. It sucks. facebook wont hire u\n\nc. \n\nInitialization: y = 0 and i = n . The first summation iterates over -1 steps, so it never calculates something. \n\n\nMaintenance: You begin by decreasing n, thereby increasing the amount of steps each summation has linearly by each iteration. This is definitionally equivalent to the latter intersection \n ","owner":"0","last_version":"21","next_version":"23","create":"1474509353","event":"edited","favorite":"0","diffForHumans":"12 hours ago"},{"id":21,"created_at":"2016-09-22 01:45:38","updated_at":"2016-09-22 01:55:53","title":"Analysis 2","description":"jquery","content":"3) a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j >= 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n}\nreturn false\n\nb.  MERGESORT(A,B);\n      checkif100(A,B);\n\n4) a. `n`\nb. \ny = 0;\nfor i to n\nz = 1\nfor j = 1 to i\n       z = x * z\ny = y + z*a_k\n\nrunning time is n^2 since i is a factor n and it runs inside an n loop. It sucks. facebook wont hire u\n\nc. \n\nInitialization: ","owner":"0","last_version":"20","next_version":"22","create":"1474508738","event":"edited","favorite":"0","diffForHumans":"13 hours ago"},{"id":20,"created_at":"2016-09-22 01:35:34","updated_at":"2016-09-22 01:45:38","title":"Analysis 2","description":"jquery","content":"3) a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j >= 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n}\nreturn false\n\nb.  MERGESORT(A,B);\n      checkif100(A,B);\n\n4) a. `n`\nb. \ny = 0;\nfor i to n\nz = 1\nfor j = 1 to i\n       z = x * z\ny = y + z*a_k\n\nrunning time is n^2 since i is a factor n and it runs inside an n loop. It sucks. facebook wont hire u\n\nc. \n\nInitialization: Before the loop initializes, y = 0\n\n\nMaintenance: We can prove that each loop maintains this using induction.  The base case for induction for this problem is n = i . In this case, the loop will run only once, meaning the term is the solution is just x. This is equivalent to the summation  \n\n\nk","owner":"0","last_version":"19","next_version":"21","create":"1474508134","event":"edited","favorite":"0","diffForHumans":"14 hours ago"},{"id":19,"created_at":"2016-09-22 01:25:02","updated_at":"2016-09-22 01:35:34","title":"Analysis 2","description":"jquery","content":"3) a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j >= 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n}\nreturn false\n\nb.  MERGESORT(A,B);\n      checkif100(A,B);\n\n4) a. `n`\nb. \ny = 0;\nfor i to n\nz = 1\nfor j = 1 to i\n       z = x * z\ny = y + z*a_k\n\nrunning time is n^2 since i is a factor n and it runs inside an n loop. It sucks. facebook wont hire u\n\nc. \n\nInitialization: Before the loop initializes, y = 0\n\nMaintenance: We can prove that each loop maintains this using induction.  The base case for induction for this problem is n = i . In this case, the loop will run only once, meaning the term is the solution.","owner":"0","last_version":"18","next_version":"20","create":"1474507502","event":"edited","favorite":"0","diffForHumans":"14 hours ago"},{"id":18,"created_at":"2016-09-22 01:11:36","updated_at":"2016-09-22 01:25:02","title":"Analysis 2","description":"jquery","content":"3) a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j >= 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n}\nreturn false\n\nb.  MERGESORT(A,B);\n      checkif100(A,B);\n\n4) a. `n`\nb. \ny = 0;\nfor i to n\n       z = 1\n       for j = 1 to i\n       j = j * z\n      y = y + z*a_k\n\nrunning time is n^2. It sucks. facebook wont hire u\n\nc. \n\nInitialization: ","owner":"0","last_version":"16","next_version":"19","create":"1474506696","event":"edited","favorite":"0","diffForHumans":"14 hours ago"},{"id":16,"created_at":"2016-09-22 00:01:07","updated_at":"2016-09-22 01:11:36","title":"Analysis 2","description":"jquery","content":"3) a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j >= 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n}\nreturn false\n\nb.  MERGESORT(A,B);\n      checkif100(A,B);\n\n4) a. `n`\nb. \ny = 0;\nfor i to n\n       z = 1\n       for j to i\n       j = j * z\n      y = y + z*a_k\n\n\nc. \n\nInitialization: Before the loop initializes, we have y = 0. \n\nMaintenance:  \n\n","owner":"0","last_version":"15","next_version":"18","create":"1474502467","event":"edited","favorite":"0","diffForHumans":"14 hours ago"},{"id":15,"created_at":"2016-09-21 23:50:45","updated_at":"2016-09-22 00:01:07","title":"Analysis 2","description":"jquery","content":"3) a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j > 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n}\nreturn false\n\nb.  MERGESORT(A,B);\n      checkif100(A,B);\n\n4) a. `n`\nb. \ny = 0;\nfor i to n\n       z = 1\n       for j to i\n       j = j * z\n      y = y + z*a_k\n\n\nc. \n\nInitialization: both summations have no added elements, so they are equivalent.  y = 0 in both cases.  At the beginning of the first loop, y is set to `a sub n` since xy reduces to 0 in line 3.\n\nT: with each loop, k edges closer to i + 1. When k reaches i + 1, then the loop will terminate. This implies that in the ending \n\n","owner":"0","last_version":"0","next_version":"16","create":"1474501845","event":"created","favorite":"0","diffForHumans":"15 hours ago"}]},{"id":"31","created_at":"2016-09-22 05:06:05","updated_at":"2016-09-22 05:06:05","title":"Analysis","description":"jquery","content":"1a. `n dot one half n = one half n squared = Theta [n squared ]  `\nProof:\n1. s = 0 \n2. for i = 1 to n\n3. for j = i to n\n4. if(A[i] > A[j]) then s = s + 1\n5. return s\n\nline 1. 1\nline 2. `summation from i = 1 to n of innerloop`\n\nline 3.`summation from j = i to n of 1 = n - i`\n\nThis implies that you have n(n - i) + 2. but the constant doesn't matter  \n\ni's average value is .5 which collapses to \n\n`n dot one half n` thereby proving the original statement\n\n1b. `n dot one half n dot one fourth n = one eighth n cubed = Theta[n cubed ]`\n\nProof  2\n1. s = 0\n2. for i = 1 to n\n3. for j = i to n\n4. for k = i to j\n5. if(A[k] - A[i] = A[j])\n6. return s\n\nline 1. 1\nline 2. `summation from i = 1 to n of innerloop`\n\nline 3. `summation from j = i to n of innerinnerloop`\n\nline 4. `summation from k = i to j of 1`\n\nline 6. 1\n\nThis is equivalent to `Theta[n cubed ]`\nThe upperbound is to initialize j and k at 1. This will always run near `n cubed` because j is a function of n.\n\nThe lowerbound is to set k = j so that the internal loop always runs in 1 time, \nrendering `n squared` which is `n cubed` on the base case.\nAnother proof is that j is a function of n and i is sometimes set to 1, so as n \napproaches infinity, all three loops approach n, rendering `n cubed`\n\n2 `17, log log n, log sub 10 n = log n, (log n) squared , square root of n , n, n (log n) squared ,`\n`(4n + 7) squared  =  2^(2 log n) , (3\/2)^n , 4^n = 2^(2n + 5) , n^(log n) , n! , n^n` \n","owner":"1","last_version":"27","next_version":"0","create":"1474520765","event":"edited","favorite":"0","versions":[{"id":27,"created_at":"2016-09-22 03:54:11","updated_at":"2016-09-22 05:06:05","title":"Analysis","description":"jquery","content":"1a. `n dot one half n = one half n squared = Theta [n squared ]  `\nProof:\n1. s = 0 \n2. for i = 1 to n\n3. for j = i to n\n4. if(A[i] > A[j]) then s = s + 1\n5. return s\n\nline 1. 1\nline 2. `summation from i = 1 to n of innerloop`\n\nline 3.`summation from j = i to n of 1 = n - i`\n\nThis implies that you have n(n - i) + 2. but the constant doesn't matter  \n\ni's average value is .5 which collapses to \n\n`n dot one half n` thereby proving the original statement\n\n1b. `n dot one half n dot one fourth n = one eighth n cubed = Theta[n cubed ]`\n\nProof  2\n1. s = 0\n2. for i = 1 to n\n3. for j = i to n\n4. for k = i to j\n5. if(A[k] - A[i] = A[j])\n6. return s\n\nline 1. 1\nline 2. `summation from i = 1 to n of innerloop`\n\nline 3. `summation from j = i to n of innerinnerloop`\n\nline 4. `summation from k = i to j of 1`\n\nline 6. 1\n\nThis is equivalent to `Theta[n cubed ]`\nThe upperbound is to initialize j and k at 1. This will always run near `n cubed` because j is a function of n.\n\nThe lowerbound is to set k = j so that the internal loop always runs in 1 time, \nrendering `n squared` which is `n cubed` on the base case.\nAnother proof is that j is a function of n and i is sometimes set to 1, so as n \napproaches infinity, all three loops approach n, rendering `n cubed`\n\n2 `17, log log n, log sub 10 n = log n, (log n) squared , square root of n , n, n (log n) squared ,`\n`(4n + 7) squared  =  2^(2 log n) , (3\/2)^n , 4^n = 2^(2n + 5) , n^(log n) , n! , n^n` \n","owner":"0","last_version":"25","next_version":"31","create":"1474516451","event":"edited","favorite":"0","diffForHumans":"10 hours ago"},{"id":25,"created_at":"2016-09-22 03:40:59","updated_at":"2016-09-22 03:54:11","title":"Analysis","description":"jquery","content":"1)a. `n dot one half n = one half n squared = Theta [n squared ]  `\nProof:\n1. s = 0 \n2. for i = 1 to n\n3. for j = i to n\n4. if(A[i] > A[j]) then s = s + 1\n5. return s\n\nline 1. 1\nline 2. `summation from i = 1 to n of innerloop`\n\nline 3.`summation from j = i to n of 1 = n - i`\n\nThis implies that you have n(n - i) + 2. but the constant doesn't matter  \n\ni's average value is .5 which collapses to \n\n`n dot one half n` thereby proving the original statement\n\nb. `n dot one half n dot one fourth n = one eighth n cubed = Theta[n cubed ]`\n\nProof  2\n1. s = 0\n2. for i = 1 to n\n3. for j = i to n\n4. for k = i to j\n5. if(A[k] - A[i] = A[j])\n6. return s\n\nline 1. 1\nline 2. `summation from i = 1 to n of innerloop`\n\nline 3. `summation from j = i to n of innerinnerloop`\n\nline 4. `summation from k = i to j of 1`\n\nline 6. 1\n\nThis is equivalent to `Theta[n cubed ]`\nThe upperbound is to initialize j and k at 1. This will always run near `n cubed` because j is a function of n.\n\nThe lowerbound is to set k = j so that the internal loop always runs in 1 time, \nrendering `n squared` which is `n cubed` on the base case.\nAnother proof is that j is a function of n and i is sometimes set to 1, so as n \napproaches infinity, all three loops approach n, rendering `n cubed`\n\n2) `17, log log n, log sub 10 n = log n, (log n) squared , square root of n , n, n (log n) squared ,`\n`(4n + 7) squared  =  2^(2 log n) , (3\/2)^n , 4^n = 2^(2n + 5) , n^(log n) , n! , n^n` \n","owner":"0","last_version":"24","next_version":"27","create":"1474515659","event":"edited","favorite":"0","diffForHumans":"11 hours ago"},{"id":24,"created_at":"2016-09-22 03:30:58","updated_at":"2016-09-22 03:40:59","title":"Analysis","description":"jquery","content":"1) a. `n dot one half n = one half n squared = Theta [n squared ]  `\nProof:\n1. s = 0 \n2. for i = 1 to n\n3. for j = i to n\n4. if(A[i] > A[j]) then s = s + 1\n5. return s\n\nline 1. 1\nline 2. `summation from i = 1 to n of innerloop`\n\nline 3.`summation from j = i to n of 1 = n - i`\n\nThis implies that you have n(n - i) + 2. but the constant doesn't matter  \n\ni's average value is .5 which collapses to \n\n`n dot one half n` thereby proving the original statement\n\nb. `n dot one half n dot one fourth n = one eighth n cubed `\n\nProof  2\n1. s = 0\n2. for i = 1 to n\n3. for j = i to n\n4. for k = i to j\n5. if(A[k] - A[i] = A[j])\n6. return s\n\nline 1. 1\nline 2. `summation from i = 1 to n of innerloop`\n\nline 3. `summation from j = i to n of innerinnerloop`\n\nline 4. `summation from k = i to j of 1`\n\nline 6. 1\n\nThis is equivalent to `Theta[n cubed ]`\n\nThe upperbound is to in\n\n2) `17, log log n, log sub 10 n = log n, (log n) squared , square root of n , n, n (log n) squared ,`\n`(4n + 7) squared  =  2^(2 log n) , (3\/2)^n , 4^n = 2^(2n + 5) , n^(log n) , n! , n^n` \n","owner":"0","last_version":"17","next_version":"25","create":"1474515058","event":"edited","favorite":"0","diffForHumans":"12 hours ago"},{"id":17,"created_at":"2016-09-22 01:01:28","updated_at":"2016-09-22 03:30:58","title":"Analysis","description":"jquery","content":"1) a. `n dot one half n = one half n squared  `\nb. `n dot one half n dot one fourth n = one eighth n cubed `\n\n2) `17, log log n, log sub 10 n = log n, (log n) squared , square root of n , n, n (log n) squared ,`\n`(4n + 7) squared  =  2^(2 log n) , (3\/2)^n , 4^n = 2^(2n + 5) , n^(log n) , n! , n^n` \n","owner":"0","last_version":"14","next_version":"24","create":"1474506088","event":"edited","favorite":"0","diffForHumans":"12 hours ago"},{"id":14,"created_at":"2016-09-21 23:41:10","updated_at":"2016-09-22 01:01:28","title":"Analysis","description":"jquery","content":"1) a. `n dot one half n = one half n squared `\nb. `n dot one half n dot one fourth n = one eighth n cubed `\n\n2) `17, log log n, log sub 10 n, log n, (log n) squared , square root of n , n, n (log n) squared ,`\n`(4n + 7) squared , 2^(2 log n) , (3\/2)^n , 4^n = 2^(2n + 5) , n^(log n) , n! , n^n` \n","owner":"0","last_version":"2","next_version":"17","create":"1474501270","event":"edited","favorite":"0","diffForHumans":"14 hours ago"},{"id":2,"created_at":"2016-09-20 16:41:40","updated_at":"2016-09-21 23:41:11","title":"Analysis","description":"jquery","content":"1) a. `n dot one half n = one half n squared `\nb. `n dot one half n dot one fourth n = one eighth n cubed `\n\n2) `17, log log n, log sub 10 n, log n, (log n) squared , square root of n , n, n (log n) squared ,`\n`(4n + 7) squared , 2^(2 log n) , (3\/2)^n , 4^n = 2^(2n + 5) , n^(log n) , n! , n^n` \n\n3) a.\ncheckif100(A, B):\n i = 0; \nj = length(B);\nwhile(j > 0 && i < length(A)){\n\n        if(A[i] + B[j] > 100){\n                j--;\n        }\n        if(A[i] + B[j] < 100){\n                i++;\n        }\n        if(A[i] + B[j] == 100){\n               return true;\n        }\n\n}\n\nreturn false\n\nb.  MERGESORT(A,B);\n      checkif100(A,B);\n\n4) a. `n`\nb. \ny = 0;\nfor i to n\n       z = 1\n       for j to i\n       j = j * z\n      y = y + z*a_k\n\n\nc. \n","owner":"0","last_version":"1","next_version":"14","create":"1474389700","event":"edited","favorite":"0","diffForHumans":"16 hours ago"},{"id":1,"created_at":"2016-09-20 16:31:29","updated_at":"2016-09-20 16:41:40","title":"Analysis","description":"jquery","content":"1) a. `n dot one half n = one half n squared `\nb. `n dot one half n dot one fourth n = one eighth n cubed `\n\n2) `17, log log n, log sub 10 n, log n, (log n) squared , square root of n , n, n (log n) squared ,`\n`(4n + 7) squared , 2^(2 log n) , (3\/2)^n , 4^n = 2^(2n + 5) , n^(log n) , n! , n^n` \n\n3) \n","owner":"0","last_version":"0","next_version":"2","create":"1474389089","event":"created","favorite":"0","diffForHumans":"1 day ago"}]},{"id":"13","created_at":"2016-09-21 18:21:27","updated_at":"2016-09-21 18:21:27","title":"Aho stuff","description":"jquery","content":"The regular languages are closed under union and compliment, Kleene *, reversed, homomorphism\n\nTheorem \nIf L + M are regular languages, then `L Union M` is a regular language \n\nProof\nLet `R sub L` be a regular expression for L\nLet `R sub M` be a regular expression for M\n`R sub L + R sub M` is a regular expression for `L union M`\n\nTheorem: \nIf `L` is a regular language over `Sigma` then `L` is a regular language \n`L = Sigma * - L`\n\nProof:\nLet `D = (Q, Sigma,  baby delta, q sub 0 , F) `be a DFA for L\nLet `A = (Q, Sigma, baby delta, q sub 0 , Q - F)` be a DFA for `L of A = L(D) compliment `\n\nTheorem: \nIf `L and M` are a regular languages over `Sigma` then `L intersection M` is regular by Demorgans Law\n\n`L intersection M = ( L compliment union M compliment ) compliment` \n\n","owner":"1","last_version":"4","next_version":"0","create":"1474482087","event":"edited","favorite":"0","versions":[{"id":4,"created_at":"2016-09-21 17:26:00","updated_at":"2016-09-21 18:21:27","title":"Aho stuff","description":"jquery","content":"The regular languages are closed under union and compliment, Kleene *, reversed, homomorphism\n\nTheorem \nIf L + M are regular languages, then `L Union M` is a regular language \n\nProof\nLet `R sub L` be a regular expression for L\nLet `R sub M` be a regular expression for M\n`R sub L + R sub M` is a regular expression for `L union M`\n\nTheorem: \nIf `L` is a regular language over `Sigma` then `L` is a regular language \n`L = Sigma * - L`\n\nProof:\nLet `D = (Q, Sigma,  baby delta, q sub 0 , F) `be a DFA for L\nLet `A = (Q, Sigma, baby delta, q sub 0 , Q - F)` be a DFA for `L of A = L(D) compliment `\n\nTheorem: \nIf `L and M` are a regular languages over `Sigma` then `L intersection M` is regular by Demorgans Law\n\n`L intersection M = ( L compliment union M compliment ) compliment` \n\n","owner":"0","last_version":"3","next_version":"13","create":"1474478760","event":"edited","favorite":"0","diffForHumans":"21 hours ago"},{"id":3,"created_at":"2016-09-21 17:15:59","updated_at":"2016-09-21 17:26:00","title":"Aho stuff","description":"jquery","content":"The regular languages are closed under union and compliment\n\nTheorem \nIf L + M are regular languages, then `L Union M` is a regular language \n\nProof\nLet `R sub L` be a regular expression for L\nLet `R sub M` be a regular expression for M\n`R sub L + R sub M` is a regular expression for `L union M`\n\nTheorem: \nIf `L` is a regular language over `Sigma` then `L` is a regular language \n`L = Sigma * - L`\n\nProof:\nLet `D = (Q, Sigma,  baby delta, q sub 0 , F) `be a DFA for L\nLet `A = (Q, Sigma, baby delta, q sub 0 , Q - F)` be a DFA for `L of A = L(D) compliment `\n\n\nTheorem: \nIf `L and M` are a regular languages over `Sigma` then `L intersection M` is regular by Demorgans Law\n\n`L intersection M = ( L compliment union M compliment ) compliment` \n\nTh","owner":"0","last_version":"0","next_version":"4","create":"1474478159","event":"created","favorite":"0","diffForHumans":"22 hours ago"}]},{"id":"12","created_at":"2016-09-21 18:06:36","updated_at":"2016-09-21 18:14:51","title":"Continue","description":"jquery","content":"Consider `L sub 1 = {w | w ` is a string of a's + b's and `# sub a (w) = # sub b (w) }`\nProve that `L` is not regular. \nPick `w = a^n b^n` is valid, but there is a more elegant way. \nThe most elegant proofs are those that return something to a previously solved problem. \n\nLet's use the fact that the regular languages are closed under the intersection of regular languages \n\n`L sub 1 intersect a star b star = { a^n b^n | n greater than or equal to 0 } = L` therefore `L sub 1` is not regular\nConsider `L sub 1 = { w | w ` is a string of balanced a's + b's `}`\nProve `L sub 1` is not regular. \nConsider `L sub 1 intersection a star b star = {a^n b^n | n greater than or equal to 0} = L`\n\nNote: when we talk about regular expression, we are talking about Kleene regular expression, in contrast to PRCE implementations of \"regular expre","owner":"1","last_version":"0","next_version":"0","create":"1474481196","event":"created","favorite":"0","versions":[]},{"id":"11","created_at":"2016-09-21 17:59:55","updated_at":"2016-09-21 17:59:55","title":"Pumping Lemma ","description":"jquery","content":"Pumping Lemma for Regular Languages \n\nFor every nonfinite regular language L there exists a constant that depends on L such that for all w in L, with |w| > n we can write w = xyz such that \n\n(1) `y not equal Sigma`\n(2) `|xy| less than or equal to n`\n(3) For all `k greater than or equal to 0`, `xy^k z` is in L\n\nProof \n\nLet = `D = (Q, Sigma,  baby delta, q, F)` be a DFA for `L`\n\nLet `|Q|` = n\n\nConsider a string w in L where `|w| = m greater than or equal to n`\n\n`a sub 1 a sub 2 .... a sub i a sub (i + 1) a sub (i + 2) .... a sub j a sub (j + 1) a sub (j + 2) .... a sub M`\n= `q sub 1 q sub 2 .... q sub i , q sub (i + 1) , q sub (i + 2) ... q sub j , q sub (j + 1) .... q sub M`\n\nBy the pigeon hole principle, one state must repeat.\n`a sub (i + 1) ... a sub j not equal Sigma`\n`|xy| less than or equal to n`\n`xz within L`\n`xyz within L`\n`yk greater than or equal to 0`\n`xy yz within L`","owner":"1","last_version":"9","next_version":"0","create":"1474480795","event":"edited","favorite":"0","versions":[{"id":9,"created_at":"2016-09-21 17:49:49","updated_at":"2016-09-21 17:59:55","title":"Pumping Lemma ","description":"jquery","content":"Pumping Lemma for Regular Languages \n\nFor every nonfinite regular language L there exists a constant that depends on L such that for all w in L, with |w| > n we can write w = xyz such that \n\n(1) `y not equal Sigma`\n(2) `|xy| less than or equal to n`\n(3) For all `k greater than or equal to 0`, `xy^k z` is in L\n\nProof \n\nLet = `D = (Q, Sigma,  baby delta, q, F)` be a DFA for `L`\n\nLet `|Q|` = n\n\nConsider a string w in L where `|w| = m greater than or equal to n`\n\n`a sub 1 a sub 2 .... a sub i a sub (i + 1) a sub (i + 2) .... a sub j a sub (j + 1) a sub (j + 2) .... a sub M`\n= `q sub 1 q sub 2 .... q sub i , q sub (i + 1) , q sub (i + 2) ... q sub j , q sub (j + 1) .... q sub M`\n\nBy the pigeon hole principle, one state must repeat.\n`a sub (i + 1) ... a sub j not equal Sigma`\n`|xy| less than or equal to n`\n`xz within L`\n`xyz within L`\n`yk greater than or equal to 0`\n`xy yz within L`","owner":"0","last_version":"8","next_version":"11","create":"1474480189","event":"edited","favorite":"0","diffForHumans":"21 hours ago"},{"id":8,"created_at":"2016-09-21 17:39:22","updated_at":"2016-09-21 17:49:49","title":"Pumping Lemma ","description":"jquery","content":"Pumping Lemma for Regular Languages \n\nFor every nonfinite regular language L there exists a constant that depends on L such that for all w in L, with |w| > n we can write w = xyz such that \n\n(1) `y not equal Sigma`\n(2) `|xy| less than or equal to n`\n(3) For all `k greater than or equal to 0`, `xy^k z` is in L\n\nProof \n\nLet = `D = (Q, Sigma,  baby delta, q, F)` be a DFA for `L`\n\nLet `|Q|` = n\n\nConsider a string w in L where `|w| = m greater than or equal to n`\n\n`a sub 1 a sub 2 .... a sub i a sub (i + 1) a sub (i + 2) .... a sub j a sub (j + 1) a sub (j + 2) .... a sub M`\n= `q sub 1 q sub 2 .... q sub i , q sub (i + 1) , q sub (i + 2) ... q sub j , q sub (j + 1) .... q sub M`\n\nBy the pigeon hole principle, one state must repeat.\n","owner":"0","last_version":"0","next_version":"9","create":"1474479562","event":"created","favorite":"0","diffForHumans":"21 hours ago"}]},{"id":"10","created_at":"2016-09-21 17:54:31","updated_at":"2016-09-21 18:03:01","title":"PL use cases","description":"jquery","content":"Theorem: \n\nLet `L = {a^m b^m | m greater than or equal to 0}` state that L is not regular. prove the language by contradiction \n\nProof: Assume L is regular \npick `w = a to the n b to the n` with n being a constant within L\n`w = xyz`\nSince `y not equal Sigma` , `y` is `a^p` for some `0 < p less than or equal to n`\nChoose `k = 0` and consider `xz = a^(n dot p) b^n`\n`xz` is NOT in `L` so CONTRADICTION\n\nTherefore, L is not ","owner":"1","last_version":"0","next_version":"0","create":"1474480471","event":"created","favorite":"0","versions":[]},{"id":"7","created_at":"2016-09-21 17:36:39","updated_at":"2016-09-21 17:39:05","title":"Homomorphisms","description":"jquery","content":"\nA homomorphism is the mapping of a string from one alphabet into another alphabet.\n\n`h: Sigma goes to triangle  star`\n`h(d) = D` , `h(o) = O` , `h(g) = G` so `h(dog) = DOG`\nare the regular languages placed under homomorphism?\neasy proof:\n\n`R = dog` , `R goes to a within Sigma` , `R^R = god` , `R goes to h(a)`\n\nThe inverse homomorphism  ","owner":"1","last_version":"0","next_version":"0","create":"1474479399","event":"created","favorite":"0","versions":[]},{"id":"6","created_at":"2016-09-21 17:36:31","updated_at":"2016-09-21 17:38:51","title":"Aho 2","description":"jquery","content":"Proof using DFAs\n\nLet `D sub L = (Q sub L , Sigma,  baby delta, q sub L , F sub L)` be a DFA for L\nLet `D sub M = (Q sub M , Sigma,  baby delta, q sub M , F sub M)` be a DFA for M\n`A = (Q sub L cross Q sub M, Sigma,  baby delta, (q sub L , q sub M), F sub L cross F sub M ) `\n`baby delta ((p, q), q) = ( baby delta sub L (p, a), baby delta sub M (q, a))`\n`baby delta star ((q sub L , q sub M) , w) = (r, s)`\nIFF `baby delta sub L star (q sub L , w) = r` and `baby delta sub M star (q sub M , w) = s`\n`L^R = {w^R | w is in L}`\n`R, S` then `RS` is a regular language\n","owner":"1","last_version":"5","next_version":"0","create":"1474479391","event":"edited","favorite":"0","versions":[{"id":5,"created_at":"2016-09-21 17:26:28","updated_at":"2016-09-21 17:36:31","title":"Aho 2","description":"jquery","content":"Proof using DFAs\n\nLet `D sub L = (Q sub L , Sigma,  baby delta, q sub L , F sub L)` be a DFA for L\nLet `D sub M = (Q sub M , Sigma,  baby delta, q sub M , F sub M)` be a DFA for M\n`A = (Q sub L cross Q sub M, Sigma,  baby delta, (q sub L , q sub M), F sub L cross F sub M ) `\n`baby delta ((p, q), q) = ( baby delta sub L (p, a), baby delta sub M (q, a))`\n`baby delta star ((q sub L , q sub M) , w) = (r, s)`\nIFF `baby delta sub L star (q sub L , w) = r` and `baby delta sub M  star (q sub M , w) = s`\n`L^R = {w^R | w is in L}`\n`R, S` then `RS` is a regular language\n\nA homomorphism is the mapping of a string from one alphabet into another alphabet.\n\n`h: Sigma goes to triangle star`\n`h(d) = D` , `h(o) = O` , `h(g) = G` so `h(dog) = DOG`\nare the regular lan","owner":"0","last_version":"0","next_version":"6","create":"1474478788","event":"created","favorite":"0","diffForHumans":"22 hours ago"}]}],
+        chosen: '',
+        blank: '',
+        time: 0,
+        bug: null
+      },
+      created: function () {
+        //this.chosen = this.notes[0];
+        //console.log(this.notes);
+        this.blank = '';
+        var prechosen = getParameterByName('chosen');
+        if(prechosen){
+          console.log("in loop");
+          console.log(prechosen);
+
+          for(i = 0; i < this.notes.length; i++){
+            note = this.notes[i];
+            console.log(note.id);
+            if(parseInt(note.id) == parseInt(prechosen)){
+              this.choose(note);
+              break;
+            }
+          }
+          console.log(this.chosen);
+        }
+      },
+      methods: {
+        choose: function (note) {
+          this.chosen = note;
+          if(this.chosen.content == ""){
+            $(".startpanel").fadeIn();
+          } else {
+            $(".startpanel").fadeOut();
+          }
+        },
+        report: function() {
+          var base_url = window.location.protocol + "//" + window.location.host;
+          $.ajaxSetup({
+             headers: { 'X-CSRF-Token' : "6o2BPjsbAyHPRgwuY30Qc0tnHKGMNj9k63vzGMuR"}
+          });
+          $.ajax({
+              type: "POST", // or GET
+              url: base_url + "/report",
+              data: {'content': this.chosen.content, 'id': this.chosen.id, 'bug': this.bug},
+              success: function(data){
+                this.bug = "";
+                $(".bugmoniter").val("");
+                $(".bugform").hide();
+              }
+
+          });
+        },
+        save: function(){
+          var d = new Date();
+          if(d.getTime() - this.time > 1000){
+            this.time = d.getTime();
+            var base_url = window.location.protocol + "//" + window.location.host;
+      			$.ajaxSetup({
+      			   headers: { 'X-CSRF-Token' : "6o2BPjsbAyHPRgwuY30Qc0tnHKGMNj9k63vzGMuR"}
+      			});
+            $.ajax({
+      			    type: "POST", // or GET
+      			    url: base_url + "/save",
+                dataType: 'json',
+                data: {'content': this.chosen.content, 'id': this.chosen.id},
+      			    success: function(data){
+                  //console.log(data);
+      			    },
+                error: function(data){
+                  var errors = data.responseJSON;
+                  //console.log(errors);
+                }
+
+    			  });
+          }
+        },
+        rename: function(){
+          var base_url = window.location.protocol + "//" + window.location.host;
+    			$.ajaxSetup({
+    			   headers: { 'X-CSRF-Token' : "6o2BPjsbAyHPRgwuY30Qc0tnHKGMNj9k63vzGMuR"}
+    			});
+          $.ajax({
+    			    type: "POST", // or GET
+    			    url: base_url + "/rename",
+              dataType: 'json',
+              data: {'title': this.chosen.title, 'id': this.chosen.id},
+    			    success: function(data){
+                //console.log(data);
+    			    },
+              error: function(data){
+                var errors = data.responseJSON;
+                //console.log(errors);
+              }
+
+  			  });
+
+        },
+        favorite: function(note){
+          var base_url = window.location.protocol + "//" + window.location.host;
+    			$.ajaxSetup({
+    			   headers: { 'X-CSRF-Token' : "6o2BPjsbAyHPRgwuY30Qc0tnHKGMNj9k63vzGMuR"}
+    			});
+          $.ajax({
+    			    type: "POST", // or GET
+    			    url: base_url + "/favorite",
+              dataType: 'json',
+              data: {'id': note.id},
+    			    success: function(data){
+                console.log(data);
+    			    },
+              error: function(data){
+                var errors = data.responseJSON;
+                console.log(errors);
+              }
+
+  			  });
+
+          note.favorite = true;
+
+        },
+        unfavorite: function(note){
+          var base_url = window.location.protocol + "//" + window.location.host;
+    			$.ajaxSetup({
+    			   headers: { 'X-CSRF-Token' : "6o2BPjsbAyHPRgwuY30Qc0tnHKGMNj9k63vzGMuR"}
+    			});
+          $.ajax({
+    			    type: "POST", // or GET
+    			    url: base_url + "/unfavorite",
+              dataType: 'json',
+              data: {'id': note.id},
+    			    success: function(data){
+                console.log(data);
+    			    },
+              error: function(data){
+                var errors = data.responseJSON;
+                console.log(errors);
+              }
+
+  			  });
+
+          note.favorite = false;
+
+        },
+        restore: function(version_id){
+
+            var base_url = window.location.protocol + "//" + window.location.host;
+      			$.ajaxSetup({
+      			   headers: { 'X-CSRF-Token' : "6o2BPjsbAyHPRgwuY30Qc0tnHKGMNj9k63vzGMuR"}
+      			});
+            $.ajax({
+      			    type: "POST", // or GET
+      			    url: base_url + "/restore",
+                dataType: 'json',
+                data: {'content': this.chosen.content, 'id': this.chosen.id, 'version_id': version_id},
+      			    success: function(data){
+                  //console.log(data);
+                  location.reload();
+                  window.location.reload();
+      			    },
+                error: function(data){
+                  var errors = data.responseJSON;
+                  //console.log(errors);
+                }
+
+    			  });
+
+            location.reload();
+            window.location.reload();
+
+        },
+        delete: function(){
+          var base_url = window.location.protocol + "//" + window.location.host;
+          $.ajaxSetup({
+             headers: { 'X-CSRF-Token' : "6o2BPjsbAyHPRgwuY30Qc0tnHKGMNj9k63vzGMuR"}
+          });
+          $.ajax({
+              type: "POST", // or GET
+              url: base_url + "/delete",
+              data: {'id': this.chosen.id},
+              success: function(data){
+                location.reload();
+              }
+
+          });
+        },
+        print: function(){
+          $("textarea").hide();
+          $("ul").hide();
+          $("#result").css("width","98%");
+          $("#result").css("height","auto");
+          $("#result").css("margin-left","2%");
+          $(".noticepanel").css("width","100%");
+          $("section[name='bottommenu']").hide();
+        },
+        search: function() {
+          value = $(".searchval").val();
+          postval = prime(value)[0];
+          $("ul").find("li").removeClass('search_found');
+          $("ul").find("li").find(".num").hide();
+          if(value != ""){
+            for(i = 0; i < this.notes.length; i++){
+              note = this.notes[i];
+              count = 0;
+              if(note.content.toLowerCase().indexOf(value.toLowerCase()) != -1){
+                regex = new RegExp(value,"ig");
+                count = (note.content.match(regex) || []).length;
+                $("ul").find(".note_" + note.id).addClass('search_found');
+                $("ul").find(".note_" + note.id).append('<div class="num">'+count+'</div>');
+              }
+              //console.log(postval);
+              primecontent = note.content;
+              if(primecontent.toLowerCase().indexOf(postval.toLowerCase()) != -1){
+                regex = new RegExp(postval,"ig");
+                //console.log(count);
+                count = (primecontent.match(regex) || []).length - count;
+                //console.log(count);
+                if(count > 0){
+                  $("ul").find(".note_" + note.id).addClass('search_found');
+                  $("ul").find(".note_" + note.id).append('<div class="num yellow">'+count+'</div>');
+                }
+              }
+            }
+          }
+
+        },
+        new: function() {
+              name = $("#name").val().replace(/\n/g, '<br/>');
+              if(name.length != 0){
+                var base_url = window.location.protocol + "//" + window.location.host;
+          			$.ajaxSetup({
+          			   headers: { 'X-CSRF-Token' : "6o2BPjsbAyHPRgwuY30Qc0tnHKGMNj9k63vzGMuR"}
+          			});
+                $.ajax({
+          			    type: "POST", // or GET
+          			    url: base_url + "/add",
+                    async: false,
+                    data: {'name': name, 'description': "jquery"},
+          			    success: function(data){
+                      $("#add").show();
+                      $("#new").hide();
+                      $("#search").show();
+                      $("#classadd").hide();
+                      d = data;
+          			    }
+        			  });
+                this.notes.unshift(d);
+                this.chosen = this.notes[0];
+                $("li").removeClass("chosen");
+                $("#writer").show();
+                $("section[name='bottommenu']").show();
+
+                $("#instruction").hide();
+                name = $("#name").val("");
+                $(".startpanel").fadeIn();
+                $( "#input" ).focus();
+              }
+        }
+      }
+    })
+
+    //JQUERY
+    $( document ).ready(function() {
+      window.matrix_helper = false;
+      window.venn_helper = false;
+
+
+        $(document).on("click",".closebox",function(){
+          $(this).parent().hide();
+        });
+
+        var prechosen = getParameterByName('chosen');
+        if(prechosen){
+
+          name = ".note_" + prechosen;
+          if(prechosen != "new"){
+            $("document").delay(1000).find(name).trigger("click");
+            $(function() {
+                setTimeout(function(){$(name).click()}, 500);
+             });
+          } else {
+            $("document").delay(1000).find("#add").trigger("click");
+            $(function() {
+                setTimeout(function(){$("#add").click()}, 500);
+             });
+          }
+
+
+        }
+
+        $(".tourpanel nav a").click(function(){
+          attr = $(this).attr("term");
+          $(".tourpanel .content").hide();
+          $(".tourpanel .content-" + attr).show();
+          $(".tourpanel nav a").removeClass("chosen");
+          $(this).addClass("chosen");
+        });
+
+        $(".tourpanel .content").hide();
+        $(".tourpanel .content-basics").show();
+
+
+        $(".eq").each(function(){
+          str = $(this).html();
+          str = str.substring(1,str.length-1);
+          obj = new mathex(str);
+          $(this).next().html(obj.html);
+        });
+        /*
+        $(document).on('mousemove', function(e){
+            $('#mainpoint').css({
+               left:  e.pageX-9,
+               top:   e.pageY-9
+            });
+        });
+        */
+
+
+           $('.graphs').click(function(){
+             //console.log("INSID!");
+           });
+
+
+
+        $(".icon").click(function(){
+          $(".bugform").slideToggle();
+        });
+
+        $('.firstquadrant').click(function(){
+          $("#grapher").toggleClass("first");
+          $('.firstquadrant').show();
+          $(this).hide();
+        });
+
+        $('.addanother').click(function(){
+          $(".last").addClass("permanent");
+          $(".permanent").show();
+          $("#graph").val("");
+          $("#graph").focus();
+        });
+
+        $("#graph").keyup(function(event) {
+            if (event.keyCode == 9) {
+              event.preventDefault();
+              $(".last").addClass("permanent");
+              $(".permanent").show();
+              $("#graph").val("");
+              $("#graph").focus();
+            }
+
+        });
+
+        $("#result").focusin(function(event) {
+            $(".noticepanel").fadeIn();
+
+        });
+
+        $("#result").focusout(function(event) {
+            $(".noticepanel").fadeOut();
+
+        });
+
+
+
+
+
+
+        $( "#graph" ).keyup(function() {
+
+          $(".addanother").hide();
+          $("*").removeClass("reddish");
+          $(".point").hide();
+
+          $(".showpoint").show();
+
+
+          $(".graphs").hide();
+          $(".graphs").removeClass("last");
+          $(".point").removeClass("last");
+          $(".permanent").show();
+          graph = $(this).val();
+          graph = graph.replace(/ /g,'');
+          if(graph != ""){
+            $(".addanother").show();
+          }
+
+          swapped = false;
+          swaps = [
+            ["parabola", "5trfghjiu95tghjui8"]
+          ];
+          for(l = 0; l < swaps.length; l++){
+            if(graph.indexOf(swaps[l][0]) != -1){
+              graph = swaps[l][1];
+              swapped = true;
+              break;
+            }
+          }
+
+          if(swapped == false){
+            for(p = 0; p < graph.length; p++){
+
+              vr = graph[p];
+              vr = vr.replace(",","la");
+              vr = vr.split('.').join('ra');
+              vr = vr.replace("/","qm");
+              vr = vr.replace(/;/g,"sc");
+              vr = vr.replace("'","qt");
+              vr = vr.replace("[","lb");
+              vr = vr.replace("]","rb");
+
+              vr = vr.replace("1","n1");
+              vr = vr.replace("2","n2");
+              vr = vr.replace("3","n3");
+              vr = vr.replace("4","n4");
+              vr = vr.replace("5","n5");
+              vr = vr.replace("6","n6");
+              vr = vr.replace("7","n7");
+              vr = vr.replace("8","n8");
+              vr = vr.replace("9","n9");
+              vr = vr.replace("0","n0");
+              vr = vr.replace("-","nm");
+              vr = vr.replace("=","ne");
+              //console.log(vr);
+              $("." + vr).show();
+              $("." + vr).addClass("last");
+              if($( ".graphs.permanent" ).length == 1){
+                $("." + vr).addClass("reddish");
+              }
+            }
+          }
+
+          curves = [
+            [".parabola.mainside.normal","vcft678uk,mj"],
+            [".line.straight.normal","asdfghjkl;'"],
+            [".line.straight.up1","qwertyuiop[]"],
+            [".line.straight.up2","1234567890-="],
+            [".line.straight.down1","zxcvbnm,./"],
+            [".line.straight.downhalf","asdfghjkl;'zxcvbnm,.'"],
+            [".line.straight.uphalf","qaswdefrgthyjuikkolp;[']"],
+            [".line.straight.upthreehalf","q1w2e34rt5y6u7i8o9p0[-=]"],
+            [".parabola.upsidedown.center","5trfghjiu95tghjui8"],
+            [".parabola.upsidedown.normal","r4fvbnji985ue"],
+            [".line.diagonal","zxfcguio0-="],
+            [".line.diagonalright","cvbhjkio0-=cvghjuio90-"],
+            [".line.flipdiagonalright.right1","6tyhujkm,"],
+            [".line.flipdiagonalright.normal","mnhgtr45"],
+            [".asymtopes.normal","zxcvghuiop["],
+            [".asymtopes.single","vbhjuiop"]
+          ];
+
+          count = 0;
+          graphchoice = "";
+          for(p = 0; p < curves.length; p++){
+            item = curves[p];
+            thiscount = 0;
+            for(k = 0; k < graph.length; k++){
+              if(item[1].indexOf(graph[k]) != -1){
+                thiscount++;
+              }
+            }
+
+            thiscount = (2*thiscount)/(item[1].length*.3 + 12);
+
+            if(thiscount > count){
+              count = thiscount;
+              graphchoice = item[0];
+            }
+          }
+
+          $(graphchoice).show();
+          $(graphchoice).addClass("last");
+          if($( ".graphs.permanent" ).length == 1){
+            $(graphchoice).addClass("reddish");
+          }
+
+        })
+
+        /*
+        $( "#grapher" ).mouseover(function() {
+          $('#mainpoint').show();
+        });
+
+        $( "#grapher" ).mouseleave(function() {
+          $('#mainpoint').hide();
+        });
+        */
+
+        // window.duplicatequote = false;
+
+        $(document).on("keyup",  "#input", function(event) {
+          window.cadence = [];
+          window.cadence_pointer = 0;
+          // var code = event.keyCode;
+          // if (code == 192) {
+          //   $(document).trigger({type: 'keypress', which: 192, keyCode: 192});
+          //
+          // //   window.duplicatequote = true;
+          // //   var e = $.Event("keydown", { keyCode: 67}); //"keydown" if that's what you're doing
+          // //   $(document).trigger(e);
+          // //   var e = $.Event("keypress", { keyCode: 99}); //"keydown" if that's what you're doing
+          // //   $(document).trigger(e);
+          // //   var e = $.Event("keyup", { keyCode: 67}); //"keydown" if that's what you're doing
+          // //   $(document).trigger(e);
+          // // // //   $(this).trigger(press);
+          //   console.log("HERE");
+          // }
+          // // window.duplicatequote = false;
+          $(".startpanel").fadeOut();
+          var str = $( "#input" ).val().replace(/\n/g, '<br/>');
+          str = "<div class='text'>" + str + "</div>";
+          flushdefined();
+          if(str.indexOf("search for") != -1){
+            $( "#input" ).val($( this ).val().replace("search for",""));
+            str.replace("search for","");
+            $('.searchbox').show();
+            $('.searchbox input').focus();
+          }
+          // console.log(str);
+          // Converts open and closing brackets into single quotes
+          index = 0;
+          notclosed = false;
+          while(str.indexOf("[[", index) != -1) {
+            open = str.indexOf("[[", index);
+            close = str.indexOf("]]", index);
+            if (close == -1) {
+              // break; // unmatched ]]
+              str = str + "]]";
+              close = str.indexOf("]]", index);
+            }
+            index = close + 1;
+            str = str.substring(0, open) + "`" + str.substring(open + 2, close) + "`" + str.substring(close + 2);
+          }
+
+          codebool = false;
+          while(str.indexOf("```") != -1){
+            codebool = true;
+            pos = str.indexOf("```");
+            endbloc = str.indexOf("```",pos+3);
+            if(endbloc == -1){
+              endbloc = str.length;
+            }
+            str = str.substring(0,pos) + "</div><pre><code class='codebloc PHP'>" +
+            str.substring(pos+3,endbloc) + "</code></pre><div class='text'>" + str.substring(endbloc + 3);
+          }
+
+          var print_bool = false;
+
+          while(str.indexOf("`") != -1){
+            var first = str.indexOf("`");
+            var next = str.indexOf("`",first+1);
+            str2 = "";
+            if(next == -1){
+                next = str.length;
+                str2 = str.substring(first+1,next);
+            }
+
+            teststring = str.substring(first+1,next);
+
+            if(teststring.lastIndexOf("keys:") + 5 == teststring.length && teststring.lastIndexOf("keys:") != -1){
+              $("#grapher").show();
+              $("#graph").focus();
+            }
+
+            if(print_bool == false){
+              ada_index = str.toUpperCase().indexOf("ADA",first);
+              if(ada_index < next){
+                period = str.toUpperCase().indexOf(".",ada_index);
+                if(period == -1){
+                  period = str.length;
+                }
+                print_index = str.toUpperCase().indexOf("PRINT",ada_index);
+                if(print_index < period && print_index != -1){
+                  print_bool = true;
+                  str = str.substring(0,ada_index) + str.substring(period+1);
+                  tours.save();
+                }
+              }
+            }
+
+
+            obj = new mathex(str.substring(first+1,next));
+            toadd = "";
+            if(window.defined.length > 0){
+            for(i = 0; i < window.defined.length; i++){
+              $(".definitions_group").show();
+              toadd = toadd + "<p><span style='color:lightblue'>" + window.defined[i][0] +
+              "</span> <span style='color:beige'>as</span> <i>"
+              + window.defined[i][1] + "</i></p>";
+              }
+            } else {
+              $(".definitions_group").hide();
+            }
+
+            $(".definitions").html(toadd);
+
+
+            check = false;
+            for(i = 0; i < obj.objtrain.length; i++){
+              it = obj.objtrain[i];
+              //console.log(it.name);
+              if(it.name == "integral" || it.name == "summation"){
+                check = true;
+              } else {
+                obj.objtrain.splice(i, 1);
+                i = i - 1;
+              }
+            }
+            console.log(obj.objtrain);
+
+
+
+            if(check == false){
+              $("pre code").html("");
+            }
+
+            var base_url = window.location.protocol + "//" + window.location.host;
+            $.ajaxSetup({
+               headers: { 'X-CSRF-Token' : "6o2BPjsbAyHPRgwuY30Qc0tnHKGMNj9k63vzGMuR"}
+            });
+            $.ajax({
+                type: "POST", // or GET
+                url: base_url + "/compute",
+                async: true,
+                data: {main: obj.objtrain},
+                success: function(data){
+                  //console.log(data.R);
+                  //data.R = data.R.replace(/(?:\r\n|\r|\n)/g, '<br />');
+                  //console.log(data.R);
+                  console.log(data);
+                  console.log(data.R);
+                  codestr = "<span style='opacity:.3;'>### LaTeX CODE ###</span><br><span class='latex'>"
+                  + data.LaTeX + "</span><br><span style='opacity:.3;'>### END LaTeX CODE###</span><br>"  +
+                  "<span style='opacity:.3;'>### R CODE ###</span><br>" + data.R +
+                  "<span style='opacity:.3;'>### END R CODE###</span><br><span style='opacity:.3;'>### Wolfram CODE ###</span><br>"
+                  + data.Wolfram +
+                  "<br><span style='opacity:.3;'>### END Wolfram CODE###</span>" +
+                  "<p class='answer' style='color:lightgreen !important;'>Answer: " +
+                  data.output + "</p>";
+                  $(".Rcode").html(codestr);
+                  $(".Rcode").each(function(i, block){
+                     hljs.highlightBlock(block);
+                  });
+                }
+            });
+
+
+
+            style = "";
+            if(obj.large_eq == false){
+              style = style + "margin-bottom: -46px !important;margin-top: -14px !important;";
+            }
+
+            if(str.substring(first+1,next).indexOf("venn diagram") != -1){
+              style = style + "margin-bottom:95px !important;";
+            }
+
+
+            macros = [
+              ["TRIPLE INTEGRAL",["from","to","of","in region"],"TRIPLEINTEGRAL"],
+              ["DOUBLE INTEGRAL",["from","to","of","in region"],"DOUBLEINTEGRAL"],
+              ["INTEGRAL",["from","to","of","in region"]],
+              ["PRODUCT"],
+              ["SUMMATION",["with index","for","of"]],
+              ["DERIVATIVE",["of","with respect to"]],
+              ["LIMIT",["of","approaching"]],
+              ["FRACTION",["of","over"]],
+              ["MATRIX",[["x, y, ..",","],["..w, z;",";"]],"MATRIX",true],
+              ["ROOT",["with degree","of","and then"]]
+            ];
+
+            maximum = 0;
+
+            chosen = "";
+
+            for(j = 0; j < macros.length; j++){
+              if(str2.toUpperCase().lastIndexOf(macros[j][0]) != -1 && maximum < str2.toUpperCase().lastIndexOf(macros[j][0]) + macros[j][0].length){
+                  chosen = macros[j];
+                  maximum = str2.toUpperCase().lastIndexOf(macros[j][0]) + macros[j][0].length;
+              }
+            }
+
+            if(chosen != ""){
+              sep = ["=","dx"];
+              for(i = 0; i < sep.length; i++){
+                if(str2.lastIndexOf(sep[i]) > maximum){
+                  chosen = "";
+                }
+              }
+            }
+
+            append = "";
+            found = false;
+            if(chosen != ""){
+              //console.log(chosen);
+              for(i = 0; i < chosen[1].length; i++){
+                if(chosen[1][i] instanceof Array){
+                  check = chosen[1][i][1];
+                  term = chosen[1][i][0];
+                } else {
+                  check = chosen[1][i];
+                  term = chosen[1][i];
+                }
+                find = str2.toLowerCase().indexOf(check,maximum);
+                if(find == -1){
+                  found = true;
+                  append = append + "<li>" + term + "</li>";
+                }
+              }
+              append = "<div class='hints'>" + append + "</div>";
+            }
+
+            regex = new RegExp("</div>","ig");
+            regex2 = new RegExp("<div term>","ig");
+            checkhtml = obj.html.replace(regex,"").replace(regex2,"");
+
+            window.cadence_pointer++;
+            window.cadence.push(str.substring(0,first));
+
+            if (checkhtml.trim().length > 0){ //checks if string is just whitepspace
+              if(first - 5 < 0){
+              str = str.substring(0,first) + "</div><div equation style='" + style + "'>" + obj.html + "</div><div class='text'>" +  str.substring(next+1);
+              } else {
+                str = str.substring(0,first) + "</div><div equation style='" + style + "'>" + obj.html + "</div><div class='text'>" +  str.substring(next+1);
+              }
+              window.cadence.push(obj.html);
+              window.cadence_pointer++;
+            } else {
+              str = str.substring(0,first) + "</div><div class='text'>" +  str.substring(next+1);
+            }
+
+
+            if(append != "" && found == true){
+              if(chosen[2] == undefined){
+              lookfor = "<div " + chosen[0].toLowerCase();
+            } else {
+              lookfor = "<div " + chosen[2].toLowerCase();
+            }
+              place = str.toUpperCase().lastIndexOf(lookfor.toUpperCase());
+              closing = str.indexOf(">",place);
+              str = str.substring(0,place) + lookfor + str.substring(place + lookfor.length,closing+1) + "<div class='guide'></div>" + str.substring(closing+1);
+            }
+
+
+          };
+          regex = new RegExp("<br>","g");
+          str = str.replace(regex,"</div><br><div class='text'>")
+          regex = new RegExp("<br/>","g");
+          str = str.replace(regex,"</div><br/><div class='text'>");
+          regex = new RegExp('<div class="text"></div>',"ig");
+          str = str.replace(regex,"");
+          regex = new RegExp("<div class='text'></div>","ig");
+          str = str.replace(regex,"");
+
+
+
+
+          $("#result").html(str);
+          bufferGraphs();
+
+          if(str.toUpperCase().indexOf("ADA") != -1 && teststring.toUpperCase().indexOf("ADA") != -1){
+            $("#ada").show();
+
+
+          } else {
+            $("#ada").hide();
+          }
+
+
+          if(str.toUpperCase().indexOf("MATRIX") != -1 && teststring.toUpperCase().indexOf("MATRIX") != -1){
+            if(window.matrix_helper == false){
+              $("#matrix_helper").show();
+            }
+            window.matrix_helper = true;
+          }
+
+          if(str.toUpperCase().indexOf("VENN") != -1 && teststring.toUpperCase().indexOf("VENN") != -1){
+            if(window.venn_helper == false){
+              $("#venn_helper").show();
+            }
+            window.venn_helper = true;
+          }
+
+
+          if(print_bool == true){
+            tours.print();
+          }
+
+
+
+
+
+
+
+        });
+
+        $("#add").click(function(){
+          $(".add").hide();
+
+          $(".new").show();
+          $("#classadd").show();
+
+        });
+
+        $("#classadd").click(function(){
+          $(".add").show();
+          $(".new").hide();
+          $("#name").val("");
+          $("#classadd").hide();
+
+        });
+
+
+        $("#search").click(function(){
+          $(".searchbox").show();
+          $(this).addClass("searching");
+        });
+
+        $(".tourpanel").hide();
+
+        $("#touradd").click(function(){
+          $(".tourpanel").toggle();
+          $(this).toggleClass("searching");
+        })
+
+        $(".searching").click(function(){
+          $(".searchbox input").val("");
+          $(this).removeClass("searching");
+        });
+
+        $(".sidebar_menu").click(function(){
+          $(".sidepanel").toggle();
+        });
+
+        $(".close_sidepanel").click(function(){
+          $(".sidepanel").hide();
+        })
+
+
+
+
+
+
+          $('#addform').keydown(function(event){
+            if(event.keyCode == 13) {
+              event.preventDefault();
+              return false;
+            }
+          });
+
+        $(".sidepanel").hide();
+
+        $(document).on("click","li",function() {
+
+          $(".sidebar_menu").show();
+          $("#ada").hide();
+          $(".helper").hide();
+          $("#writer").show();
+          $("section[name='bottommenu']").show();
+
+          $("#instruction").hide();
+          $("li").removeClass("chosen");
+          $(this).addClass("chosen");
+          var str = $( "#input" ).val().replace(/\n/g, '<br/>');
+          var str = "<div class='text'>" + str + "</div>";
+          flushdefined();
+
+          codebool = false;
+          while(str.indexOf("```") != -1){
+            codebool = true;
+            pos = str.indexOf("```");
+            endbloc = str.indexOf("```",pos+3);
+            if(endbloc == -1){
+              endbloc = str.length;
+            }
+            str = str.substring(0,pos) + "</div><pre><code class='codebloc PHP'>" +
+            str.substring(pos+3,endbloc) + "</code></pre><div class='text'>" + str.substring(endbloc + 3);
+
+          }
+
+          // [here]
+          index = 0;
+          notclosed = false;
+          while(str.indexOf("[[", index) != -1) {
+            open = str.indexOf("[[", index);
+            close = str.indexOf("]]", index);
+            if (close == -1) {
+              // break; // unmatched ]]
+              str = str + "]]";
+              close = str.indexOf("]]", index);
+            }
+            index = close + 1;
+            str = str.substring(0, open) + "`" + str.substring(open + 2, close) + "`" + str.substring(close + 2);
+          }
+
+          while(str.indexOf("`") != -1){
+            var first = str.indexOf("`");
+            var next = str.indexOf("`",first+1);
+            if(next == -1){
+                next = str.length;
+            }
+
+
+
+            obj = new mathex(str.substring(first+1,next));
+            toadd = "";
+            if(window.defined.length > 0){
+            for(i = 0; i < window.defined.length; i++){
+              $(".definitions_group").show();
+              toadd = toadd + "<p><span style='color:lightblue'>" + window.defined[i][0] +
+              "</span> <span style='color:beige'>as</span> <i>"
+              + window.defined[i][1] + "</i></p>";
+              }
+            } else {
+              $(".definitions_group").hide();
+            }
+
+            $(".definitions").html(toadd);
+
+            style = "";
+            if(obj.large_eq == false){
+              style = style + "margin-bottom: -46px !important;margin-top: -14px !important;";
+            }
+
+            if(str.substring(first+1,next).indexOf("venn diagram") != -1){
+              style = style + "margin-bottom:95px !important;";
+            }
+
+            regex = new RegExp("</div>","ig");
+            regex2 = new RegExp("<div term>","ig");
+            checkhtml = obj.html.replace(regex,"").replace(regex2,"");
+            if (checkhtml.trim().length > 0){ //checks if string is just whitepspace
+              if(first - 5 < 0){
+              str = str.substring(0,first) + "</div><div equation style='" + style + "'>" + obj.html + "</div><div class='text'>" +  str.substring(next+1);
+              } else {
+                str = str.substring(0,first) + "</div><div equation style='" + style + "'>" + obj.html + "</div><div class='text'>" +  str.substring(next+1);
+              }
+            } else {
+              str = str.substring(0,first) + "</div><div class='text'>" +  str.substring(next+1);
+            }
+
+
+          };
+          regex = new RegExp("<br>","g");
+          str = str.replace(regex,"</div><br><div class='text'>")
+          regex = new RegExp("<br/>","g");
+          str = str.replace(regex,"</div><br/><div class='text'>")
+          regex = new RegExp('<div class="text"></div>',"ig");
+          str = str.replace(regex,"");
+          regex = new RegExp("<div class='text'></div>","ig");
+          str = str.replace(regex,"");
+          $("#result").html(str);
+          bufferGraphs();
+          if(codebool == true){
+            $(".codebloc").each(function(i, block){
+               hljs.highlightBlock(block);
+            });
+          }
+          //console.log(tours);
+
+        });
+    });
+
+
+
+    </script>
+    <style>
+    .answer > * {
+      color:lightgreen !important;
+    }
+    .latex > * {
+      color:lightblue !important;
+    }
+    </style>
+
+
+    <!-- JavaScripts -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+</body></html>

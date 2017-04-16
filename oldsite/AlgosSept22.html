@@ -1,0 +1,129 @@
+<link rel="stylesheet" href="https://www.parsegon.com/assets/style.css">
+<link rel="stylesheet" href="https://www.parsegon.com/assets/math.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+<style>
+section[name="writer"]{
+width: 90%;
+margin-left:5%;
+margin-top:20px;
+    height: auto;
+}
+div[equation] hr {
+
+    margin-top: -10px;
+    margin-bottom: -4px;
+}
+
+div[equation]  {
+
+}
+section[name="writer"] > #result{
+width: 100% !important;
+    height: auto !important;
+}
+section[name="writer"] .text{
+ margin-bottom: -11px!important;
+}
+</style>
+
+<section name="writer" id="writer">
+
+<div id="result" contenteditable="true"><div class="text">RQUICKSORT</div><br><div class="text">pick a random element x at pivot</div><br><div class="text">Partition the array with respect to x</div><br><div class="text">|||________</div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  &lt;  </div></div><div class="text">x____|x|______</div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  &gt;  </div></div><div class="text">x_______|||</div><br><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  t(I, w) <span eqls="">=</span> <hr bgthta="">(x)  </div></div><div class="text"> I = instance, w = set of random choices</div><br><div class="text">expected running time </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  T(n) <span eqls="">=</span> max E<sub>w</sub> t(I, w)  </div></div><br><div class="text">max = </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  |I| <span eqls="">=</span> n  </div></div><br><div class="text">Current case with respect to input of size n</div><br><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term=""> z<sub>i</sub> <span eqls="">=</span>  </div></div><div class="text"> i-th smallest element of array. Final sorted array </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  z<sub>1,</sub> z<sub>2</sub> ...  </div> <div term=""></div><div term="">  z<sub>n</sub>  </div></div><br><br><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  x<sub>ij</sub> <span eqls="">=</span></div><div pwise="" two="" style="margin-left: <span static>16</span>px;"><b><a>1</a><a> <span static="">0</span>  </a></b><b><a> if z<sub>i</sub> z<sub>j</sub> uncompared </a><a> otherwise</a></b></div> <div term="">  </div></div><br><br><div class="text">x = # comparisons = </div><div equation="" style=""> <div term=""></div><div term="">  </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ i &lt; j
+</div>
+<div upperbound="">
+ 
+</div>
+</div><div term=""></div><div term=""> x<sub>ij</sub>  </div></div><br><br><div equation="" style=""> <div term=""></div><div term="">  E(x) <span eqls="">=</span> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ i &gt; j
+</div>
+<div upperbound="">
+
+</div>
+</div><div term=""></div><div term=""> x<sub>ij</sub> <span eqls="">=</span> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ i &gt; j
+</div>
+<div upperbound="">
+
+</div>
+</div><div term=""></div><div term=""> Pr(Z<sub>i</sub> , Z<sub>j</sub> , compared)  </div></div><br><br><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  Pr(Z<sub>i</sub>  , Z<sub>j</sub> , compared) <span eqls="">=</span> Pr(  </div></div><div class="text"> when pivot is in change </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  i - j  </div></div><div class="text">) = </div><br><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;">   <div term=""></div><div term="">  </div><div fraction=""><div top="">  <span static="">2</span>  </div><div bottom="">  j - i + <span static="">1</span>  </div></div><div term="">  </div>  </div><br><br><div equation="" style="">   <div term=""></div><div term="">  x <span eqls="">=</span> <hr bsgma=""><sub>i&lt;j</sub> </div><div fraction=""><div top="">  <span static="">2</span>  </div><div bottom="">  j - i + <span static="">1</span>  </div></div><div term=""> <span eqls="">=</span> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ i <span eqls="">=</span> <span static="">1</span>
+</div>
+<div upperbound="">
+ n - <span static="">1</span>
+</div>
+</div><div term=""></div><div term=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ j <span eqls="">=</span> i + <span static="">1</span>
+</div>
+<div upperbound="">
+ n
+</div>
+</div><div term=""></div><div term=""> </div><div fraction=""><div top="">  <span static="">2</span>  </div><div bottom="">  j - i + <span static="">1</span>  </div></div><div term=""> =  </div>  </div><br><br><div equation="" style="">   <div term=""></div><div term="">  <span static="">2</span> <hr dot=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ i <span eqls="">=</span> <span static="">1</span>
+</div>
+<div upperbound="">
+ n - <span static="">1</span>
+</div>
+</div><div term=""></div><div term=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ k <span eqls="">=</span> <span static="">1</span>
+</div>
+<div upperbound="">
+ n - i
+</div>
+</div><div term=""></div><div term=""> </div><div fraction=""><div top="">  <span static="">1</span>  </div><div bottom="">  k+<span static="">1</span>  </div></div><div term="">  </div>  </div><div class="text"> as </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  k <span eqls="">=</span> j - i  </div></div><br><br><div equation="" style="">   <div term=""></div><div term="">  <hr leq=""> <span static="">2</span> <hr dot=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ i <span eqls="">=</span> <span static="">1</span>
+</div>
+<div upperbound="">
+ n - <span static="">1</span>
+</div>
+</div><div term=""></div><div term=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ k <span eqls="">=</span> <span static="">1</span>
+</div>
+<div upperbound="">
+ n
+</div>
+</div><div term=""></div><div term=""> </div><div fraction=""><div top="">  <span static="">1</span>  </div><div bottom="">  k  </div></div><div term=""> <hr approx=""> <span static="">2</span>n <span style="font-style:normal;float:none;">ln</span> n  </div>  </div><br><div class="text">______________________________________</div><br><div class="text">median = </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term=""> <b ceiling="">n/2</b>  </div></div><div class="text"> - smallest element </div><br><br><div class="text">select i-th smallest element </div><br><br><div class="text">R-SELECT</div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  (A, p, r, i)  </div></div><br><div class="text">if p = r then return A[p]</div><br><div class="text">p = R-PARTITION</div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  (A, p, r)  </div></div><br><div class="text">k = q - p + 1</div><br><div class="text">if i = k then return A[q]</div><br><div class="text">else if i &lt; k then return R-SELECT</div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  (A, p, q-<span static="">1</span> , i)  </div></div><br><div class="text">else return R-SELECT</div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  (A, p + <span static="">1</span>, r, q -k)  </div></div><br><div class="text">________________________________</div><br><br><div class="text">What is the worst case? When your partition keeps being unbalanced. </div><br><br><div class="text">Worst case: </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  T(n) <span eqls="">=</span> T(n - <span static="">1</span>) + n <hr goesto=""> <hr bgthta="">(n<sup>2</sup>)  </div></div><br><div class="text">more typical: </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  T(n) <span eqls="">=</span> T(<span static="">2</span>n/3) + n <hr goesto=""> <hr bgthta="">(n)  </div></div><br><div equation="" style=""> <div term=""></div><div term=""> T(n) <hr leq=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ k <span eqls="">=</span> <span static="">0</span>
+</div>
+<div upperbound="">
+ n -<span static="">1</span>
+</div>
+</div><div term=""></div><div term="">  T(max(k, n-k-<span static="">1</span>) + n) <span eqls="">=</span>  </div></div><div class="text"> </div><br><br><div equation="" style="">   <div term=""></div><div term=""> </div><div fraction=""><div top="">  <span static="">1</span>  </div><div bottom="">  n  </div></div><div term=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ n <span eqls="">=</span> <span static="">0</span>
+</div>
+<div upperbound="">
+ n/2
+</div>
+</div><div term=""></div><div term=""> T<span style="font-style:normal;float:none;">[</span>n - k - <span static="">1</span><span style="font-style:normal;float:none;">]</span>  </div>  </div><br><br><div equation="" style="">   <div term=""></div><div term="">  </div><div fraction=""><div top="">  <span static="">2</span>  </div><div bottom="">  n  </div></div><div term=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ k=n/2+<span static="">1</span>
+</div>
+<div upperbound="">
+ n - <span static="">1</span>
+</div>
+</div><div term=""></div><div term=""> T<span style="font-style:normal;float:none;">[</span>k<span style="font-style:normal;float:none;">]</span> + n  </div>  </div><br><br><div equation="" style="">   <div term=""></div><div term="">  Tn <hr leq=""> </div><div fraction=""><div top="">  <span static="">2</span>  </div><div bottom="">  n  </div></div><div term=""> </div> <div term=""></div><div summation="">
+<div lowerbound="">
+ k=n/2+<span static="">1</span>
+</div>
+<div upperbound="">
+ n - <span static="">1</span>
+</div>
+</div><div term=""></div><div term=""> c <hr dot=""> k + n <span eqls="">=</span> </div><div fraction=""><div top="">  <span static="">2</span>c  </div><div bottom="">  n  </div></div><div term=""> <hr dot=""> </div><div fraction=""><div top="">  n <hr dot=""> <span static="">3</span>n  </div><div bottom="">  <span static="">2</span> <hr dot=""> <span static="">2</span>  </div></div><div term=""> + n <span eqls="">=</span> c <hr dot=""> </div><div fraction=""><div top="">  <span static="">3</span>n  </div><div bottom="">  <span static="">4</span>  </div></div><div term=""> + n  </div>  </div><br><br><div class="text">We want it to be </div><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;"> <div term=""></div><div term="">  <hr leq=""> cn  </div></div><br><br><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;">   <div term=""></div><div term="">  c <hr dot=""> </div><div fraction=""><div top="">  <span static="">3</span>  </div><div bottom="">  <span static="">4</span>  </div></div><div term=""> + <span static="">1</span> <hr leq=""> c  </div>  </div><br><br><div equation="" style="margin-bottom: -46px !important;margin-top: -14px !important;">   <div term=""></div><div term="">  <span static="">1</span> <hr leq=""> </div><div fraction=""><div top="">  c  </div><div bottom="">  <span static="">4</span>  </div></div><div term=""> <hr goesto=""> c <hr leq=""> <span static="">4</span>  </div>  </div>
+
+
+
+
+</div>
+</section>
