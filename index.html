@@ -59,8 +59,21 @@ section[name="features"] > .feature.square{
   width:55vh;
 }
 
+section[name="features"] > .feature.long{
+  margin-right: 2.5%;
+  width:calc(95% - 110vh);
+}
+
+section[name="features"] > .feature.noskip{
+  margin-right:0%;
+}
+
 section[name="features"] > .feature:nth-child(2n){
   margin-right:0%;
+}
+
+section[name="features"] > .feature.hardskip{
+  margin-right: 2.5%;
 }
 
 section[name="features"] > .feature > h1{
@@ -164,6 +177,33 @@ section[name="features"] > .feature > h2 > span{
 
     </h2>
 
+  </a>
+
+
+
+  <a class="feature square" style="background-image:url('images/khaled.png');"
+  href="https://vimeo.com/193752510" target="_blank">
+    <h1>DJ Khaled CORE Promo Video</h1>
+    <h2>
+      <span>Video</span>
+    </h2>
+  </a>
+
+  <a class="feature long hardskip" style="background-image:url('images/fw.png');"
+  href="https://vimeo.com/203346133" target="_blank">
+    <h1>NYC Fashion Week CORE Promo Video</h1>
+    <h2>
+      <span>Video</span>
+    </h2>
+  </a>
+
+  <a class="feature square noskip" style="background-image:url('images/pavonessa.png');">
+    <h1>PAVONESSA</h1>
+    <h2>
+      <span>Dress & Fashion</span><br>
+      <span>Introduction into Garment Design</span>
+
+    </h2>
   </a>
 
 </body>
