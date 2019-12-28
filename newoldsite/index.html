@@ -1,0 +1,226 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Prompt:400,500,600,700|Reem+Kufi" rel="stylesheet">
+<style>
+body{
+  margin: 0px;
+  padding:0px;
+}
+
+body > h1 {
+  font-family: "Prompt", "Reem Kufi";
+  font-weight: 500;
+  margin-top:20px;
+  margin-left:30px;
+  padding-top:0px;
+}
+
+body > div.menu {
+  position: absolute;
+  right:30px;
+  top:30px;
+}
+
+body > div.menu > a{
+  font-family: "Reem Kufi";
+  color:black;
+  text-decoration:none;
+  float:right;
+  margin-left:15px;
+  margin-top:2px;
+}
+
+body > div.menu > a:hover{
+  opacity: .7;
+}
+
+section[name="features"]{
+  width:calc(100% - 60px);
+  margin-left: 30px;
+  margin-right:30px;
+  min-height: 60vh;
+}
+
+section[name="features"] > .feature{
+  height: 55vh;
+  width:calc(97.5% - 55vh);
+  background-image:url('images/vid.png');
+  background-size:cover;
+  display: inline-block;
+  position: relative;
+  float:left;
+  margin-right:2.5%;
+  margin-bottom: 2.25vw;
+}
+
+
+section[name="features"] > .feature.long{
+  height: 55vh;
+  width:100% !important;
+}
+
+
+
+section[name="features"] > .feature.square{
+  margin-right: 2.5%;
+  width:55vh;
+}
+
+section[name="features"] > .feature.long{
+  margin-right: 2.5%;
+  width:calc(95% - 110vh);
+}
+
+section[name="features"] > .feature.noskip{
+  margin-right:0%;
+}
+
+section[name="features"] > .feature:nth-child(2n + 1){
+  margin-right:0%;
+}
+
+section[name="features"] > .feature.hardskip{
+  margin-right: 2.5%;
+}
+
+section[name="features"] > .feature > h1{
+  position: absolute;
+  top:10px;
+  left:18px;
+  padding:10px;
+  background-color: white;
+  font-size:14px;
+  color:black;
+  text-decoration: none;
+  font-family: "Reem Kufi";
+}
+
+section[name="features"] > .feature > h2{
+  position: absolute;
+  top:60px;
+  color:black;
+  text-decoration: none;
+  left:8px;
+  padding:10px;
+  font-size:12px;
+  font-family: "Reem Kufi";
+  line-height: 2em;
+}
+
+section[name="features"] > .feature > h2 > span{
+  background-color:white;
+  padding-left:4px;
+  padding-right:4px;
+}
+
+@media (max-width:800px){
+  section[name="features"]{
+    width:100%;
+    margin-left: 0px;
+    margin-right:0px;
+    min-height: 60vh;
+  }
+  section[name="features"] > .feature{
+    margin-right: 0% !important;
+    width:100vw !important;
+    height:100vw !important;
+    float:none !important;
+  }
+}
+</style>
+</head>
+<body>
+<h1>PREGASEN.</h1>
+<div class="menu">
+
+  <a href="https://www.parsegon.com" target="_blank">Parsegon</a>
+  <a href="https://github.com/mathexl/" target="_blank">Github</a>
+
+</div>
+<section name="features">
+  <a class="feature long" href="https://www.parsegon.com" target="_blank" style="background-image:url('images/parsegon.png');">
+    <h1>PARSEGON</h1>
+
+    <h2>
+      <span>PRODUCERS of Paperspade, Parsegon Classrooms</span> <br>
+      <span>CO-FOUNDED by Mathew Pregasen & Rikhav Shah</span><br>
+
+    </h2>
+  </a>
+
+
+  <a class="feature" href="https://www.youtube.com/watch?v=GqByaWCUKUU" target="_blank">
+    <h1>"THE IDEA STRIKES" FOR COLUMBIA ENTREPRENEURSHIP</h1>
+
+    <h2>
+      <span>DIRECTED for the Startup Columbia Festival</span> <br>
+      <span>FILMING by Kevin Chu on Nikon D7000</span><br>
+      <span>NARRATION by Justice Betty</span><br>
+      <br>
+      <span>STARRING</span><br>
+      <span>Sara Sakowitz</span><br>
+      <span>Mohamed Abedelmalik</span><br>
+      <span>Irene Koo</span><br>
+      <span>Meghna Gorrela</span><br>
+      <span>Simon Schwartz</span>
+    </span>
+    </h2>
+
+  </a>
+
+  <a class="feature square" style="background-image:url('images/moscata.png');"
+  href="https://www.behance.net/gallery/37986343/Moscata-Skies-Doodle-2" target="_blank">
+    <h1>MOSCATA SKIES</h1>
+    <h2>
+      <span>Graphic Design</span>
+    </h2>
+  </a>
+  <a class="feature square" style="background-image:url('images/Parsegon_Education.png');"
+  href="https://www.behance.net/gallery/51600691/Parsegon-Education-Graphics?" target="_blank">
+    <h1>PARSEGON EDUCATION</h1>
+    <h2>
+      <span>Graphic Design & Branding</span>
+    </h2>
+  </a>
+
+
+  <a class="feature" href="http://postrium.com"
+  style="background-image:url('images/space.png');"
+  target="_blank">
+    <h1>POSTRIUM</h1>
+
+    <h2>
+      <span>Open Source Q and A Tool for Teachers</span> <br>
+      <span>Developed at Parsegon</span>
+
+    </h2>
+
+  </a>
+
+
+
+  <a class="feature square" style="background-image:url('images/khaled.png');"
+  href="https://vimeo.com/193752510" target="_blank">
+    <h1>DJ Khaled CORE Promo Video</h1>
+    <h2>
+      <span>Video</span>
+    </h2>
+  </a>
+
+  <a class="feature" style="background-image:url('images/fw.png');"
+  href="https://vimeo.com/203346133" target="_blank">
+    <h1>NYC Fashion Week CORE Promo Video</h1>
+    <h2>
+      <span>Video</span>
+    </h2>
+  </a>
+
+  <a class="feature square noskip" style="background-image:url('images/pavonessa.png');">
+    <h1>PAVONESSA</h1>
+    <h2>
+      <span>Dress & Fashion</span><br>
+      <span>Introduction into Garment Design</span>
+
+    </h2>
+  </a>
+
+</body>

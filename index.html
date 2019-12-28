@@ -1,226 +1,117 @@
+<html>
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Prompt:400,500,600,700|Reem+Kufi" rel="stylesheet">
-<style>
-body{
-  margin: 0px;
-  padding:0px;
-}
+  <link href="https://fonts.googleapis.com/css?family=Cardo&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link href="./fa/css/all.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cardo', serif;
 
-body > h1 {
-  font-family: "Prompt", "Reem Kufi";
-  font-weight: 500;
-  margin-top:20px;
-  margin-left:30px;
-  padding-top:0px;
-}
+    }
+    body > h1{
+      width: 100%;
+      text-align:center;
+      font-size:26px;
+      letter-spacing: 9px;
+      font-weight:300;
+      margin-bottom: 5vh;
+      margin-top:5vh;
+    }
 
-body > div.menu {
-  position: absolute;
-  right:30px;
-  top:30px;
-}
+    body > .product{
+      width:600px;
+      margin-left:calc(50% - 300px);
+      display:inline-block;
 
-body > div.menu > a{
-  font-family: "Reem Kufi";
-  color:black;
-  text-decoration:none;
-  float:right;
-  margin-left:15px;
-  margin-top:2px;
-}
+    }
 
-body > div.menu > a:hover{
-  opacity: .7;
-}
+    body > .product > .images{
+      width: 100%;
+      display:inline-block;
+      position: relative;
+      font-size:20px;
+      color:#bbb;
+      cursor:pointer;
+    }
 
-section[name="features"]{
-  width:calc(100% - 60px);
-  margin-left: 30px;
-  margin-right:30px;
-  min-height: 60vh;
-}
+    body > .product > .images > .left{
+      position:absolute;
+      top: 38vh;
+      left:-26px;
+    }
 
-section[name="features"] > .feature{
-  height: 55vh;
-  width:calc(97.5% - 55vh);
-  background-image:url('images/vid.png');
-  background-size:cover;
-  display: inline-block;
-  position: relative;
-  float:left;
-  margin-right:2.5%;
-  margin-bottom: 2.25vw;
-}
+    body > .product > .images > .right{
+      position:absolute;
+      top: 38vh;
+      right:-26px;
+    }
 
+    body > .product > .images> .image{
+      width: 100%;
+      height: 80vh;
+      background-size:cover;
+      background-image:url('./img/IMG_1084.jpg');
+      background-repeat:no-repeat;
+      background-position:center;
+    }
 
-section[name="features"] > .feature.long{
-  height: 55vh;
-  width:100% !important;
-}
+    body > .product > .info{
+      width: 100%;
+      margin-top:5px;
+    }
 
+    body > .product > .info > h1{
+      font-size:24px;
+      margin-bottom:0px;
+    }
 
+    body > .product > .info > h1 > span{
+      float:right;
+      font-size:15px;
+      color:#444;
+    }
 
-section[name="features"] > .feature.square{
-  margin-right: 2.5%;
-  width:55vh;
-}
-
-section[name="features"] > .feature.long{
-  margin-right: 2.5%;
-  width:calc(95% - 110vh);
-}
-
-section[name="features"] > .feature.noskip{
-  margin-right:0%;
-}
-
-section[name="features"] > .feature:nth-child(2n + 1){
-  margin-right:0%;
-}
-
-section[name="features"] > .feature.hardskip{
-  margin-right: 2.5%;
-}
-
-section[name="features"] > .feature > h1{
-  position: absolute;
-  top:10px;
-  left:18px;
-  padding:10px;
-  background-color: white;
-  font-size:14px;
-  color:black;
-  text-decoration: none;
-  font-family: "Reem Kufi";
-}
-
-section[name="features"] > .feature > h2{
-  position: absolute;
-  top:60px;
-  color:black;
-  text-decoration: none;
-  left:8px;
-  padding:10px;
-  font-size:12px;
-  font-family: "Reem Kufi";
-  line-height: 2em;
-}
-
-section[name="features"] > .feature > h2 > span{
-  background-color:white;
-  padding-left:4px;
-  padding-right:4px;
-}
-
-@media (max-width:800px){
-  section[name="features"]{
-    width:100%;
-    margin-left: 0px;
-    margin-right:0px;
-    min-height: 60vh;
-  }
-  section[name="features"] > .feature{
-    margin-right: 0% !important;
-    width:100vw !important;
-    height:100vw !important;
-    float:none !important;
-  }
-}
-</style>
+    body > .product > .info > p{
+      margin-top:0px;
+    }
+    body > .product > .info > p > span[small]{
+      font-size:11px;
+    }
+  </style>
 </head>
 <body>
-<h1>PREGASEN.</h1>
-<div class="menu">
+  <h1>PREGASEN</h1>
+  <div class="product" id="product">
+    <div class="images">
+      <div class="image" v-show="pindex == pictureIndex" v-for="(picture, pindex) in pictures" v-bind:style="{ backgroundImage: 'url(' + picture + ')' }"></div>
+      <div class="left" v-if="pictureIndex > 0" v-on:click="pictureIndex--"><i class="fa fa-arrow-left"></i></div>
+      <div class="right" v-if="pictureIndex < 3" v-on:click="pictureIndex++"><i class="fa fa-arrow-right"></i></div>
 
-  <a href="https://www.parsegon.com" target="_blank">Parsegon</a>
-  <a href="https://github.com/mathexl/" target="_blank">Github</a>
+    </div>
 
-</div>
-<section name="features">
-  <a class="feature long" href="https://www.parsegon.com" target="_blank" style="background-image:url('images/parsegon.png');">
-    <h1>PARSEGON</h1>
-
-    <h2>
-      <span>PRODUCERS of Paperspade, Parsegon Classrooms</span> <br>
-      <span>CO-FOUNDED by Mathew Pregasen & Rikhav Shah</span><br>
-
-    </h2>
-  </a>
-
-
-  <a class="feature" href="https://www.youtube.com/watch?v=GqByaWCUKUU" target="_blank">
-    <h1>"THE IDEA STRIKES" FOR COLUMBIA ENTREPRENEURSHIP</h1>
-
-    <h2>
-      <span>DIRECTED for the Startup Columbia Festival</span> <br>
-      <span>FILMING by Kevin Chu on Nikon D7000</span><br>
-      <span>NARRATION by Justice Betty</span><br>
+    <div class="info">
+      <h1>Nimo<span>SOLD OUT</span></h1>
+      <p>Handmade Rose and 24K Gold Wall Clock, Painted Canvas Build, Limited Edition.
+      <br>26" Diameter, 1" Depth. Metal, 24K Gold Coated Dials, Standard Movement.
+      <br><br>
+      $7,519.00
       <br>
-      <span>STARRING</span><br>
-      <span>Sara Sakowitz</span><br>
-      <span>Mohamed Abedelmalik</span><br>
-      <span>Irene Koo</span><br>
-      <span>Meghna Gorrela</span><br>
-      <span>Simon Schwartz</span>
-    </span>
-    </h2>
+      <span small>SKU: PRE0001</span>
+      </p>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var product = new Vue({
+        el: '#product',
+        data: {
+          pictures: [  './img/IMG_1084.jpg','./img/IMG_1093.jpg', './img/IMG_1086.jpg', './img/IMG_1089.jpg'],
+          pictureIndex: 0,
+        }
 
-  </a>
+      });
+  });
 
-  <a class="feature square" style="background-image:url('images/moscata.png');"
-  href="https://www.behance.net/gallery/37986343/Moscata-Skies-Doodle-2" target="_blank">
-    <h1>MOSCATA SKIES</h1>
-    <h2>
-      <span>Graphic Design</span>
-    </h2>
-  </a>
-  <a class="feature square" style="background-image:url('images/Parsegon_Education.png');"
-  href="https://www.behance.net/gallery/51600691/Parsegon-Education-Graphics?" target="_blank">
-    <h1>PARSEGON EDUCATION</h1>
-    <h2>
-      <span>Graphic Design & Branding</span>
-    </h2>
-  </a>
-
-
-  <a class="feature" href="http://postrium.com"
-  style="background-image:url('images/space.png');"
-  target="_blank">
-    <h1>POSTRIUM</h1>
-
-    <h2>
-      <span>Open Source Q and A Tool for Teachers</span> <br>
-      <span>Developed at Parsegon</span>
-
-    </h2>
-
-  </a>
-
-
-
-  <a class="feature square" style="background-image:url('images/khaled.png');"
-  href="https://vimeo.com/193752510" target="_blank">
-    <h1>DJ Khaled CORE Promo Video</h1>
-    <h2>
-      <span>Video</span>
-    </h2>
-  </a>
-
-  <a class="feature" style="background-image:url('images/fw.png');"
-  href="https://vimeo.com/203346133" target="_blank">
-    <h1>NYC Fashion Week CORE Promo Video</h1>
-    <h2>
-      <span>Video</span>
-    </h2>
-  </a>
-
-  <a class="feature square noskip" style="background-image:url('images/pavonessa.png');">
-    <h1>PAVONESSA</h1>
-    <h2>
-      <span>Dress & Fashion</span><br>
-      <span>Introduction into Garment Design</span>
-
-    </h2>
-  </a>
-
+  </script>
 </body>
+</html>
